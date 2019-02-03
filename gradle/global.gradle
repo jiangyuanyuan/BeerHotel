@@ -32,7 +32,7 @@ subprojects {
             versionName SysConfig.versionName
             //            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
             ndk {
-                abiFilters "armeabi", "armeabi-v7a", "armeabi-v8a"
+                abiFilters "armeabi", "armeabi-v7a", "armeabi-v8a","x86"
             }
         }
 

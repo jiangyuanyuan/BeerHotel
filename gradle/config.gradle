@@ -42,7 +42,7 @@ subprojects {
 project(':BaseLibrary') {
     dependencies {
         //implementation fileTree(dir: 'libs', include: ['*.jar'])
-                implementation Deps.kotlinStdlibJdk8
+        implementation Deps.kotlinStdlibJdk8
         implementation Deps.supportV7
         implementation Deps.recyclerview
         implementation Deps.constraintLayout
@@ -77,6 +77,8 @@ project(':BaseLibrary') {
             exclude group: "com.android.support"
         }
         kapt Deps.glideCompiler
+        //        // 毛玻璃
+        implementation 'jp.wasabeef:glide-transformations:3.3.0'
 
         // 日志上报
         implementation Deps.bugly

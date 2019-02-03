@@ -1,5 +1,6 @@
 package com.beer.baselibrary
 
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.widget.ImageView
 import com.beer.baselibrary.DEBUG_API_BASE_URL
@@ -22,53 +23,55 @@ import io.reactivex.exceptions.OnErrorNotImplementedException
 import io.reactivex.plugins.RxJavaPlugins
 import java.io.ByteArrayOutputStream
 import java.io.File
+import jp.wasabeef.glide.transformations.BlurTransformation
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
-//fun ImageView.loadFromUrl(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
-//    GlideApp.with(this.context)
-//            .load(getGlideUrl(imageUrl))
-//            .placeholder(placeHolder)
-//            .fitCenter()
-//            .into(this)
-//}
-//
-///**
-// * 毛玻璃
-// */
-//fun ImageView.blur(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
-//    GlideApp.with(this.context)
-//            .load(getGlideUrl(imageUrl))
-//            .placeholder(placeHolder)
-//            .apply(RequestOptions.bitmapTransform(BlurTransformation(1, 100)))
-//            .into(this)
-//}
-//
-///**
-// * 圆角
-// *
-// * redius:传dp值
-// */
-//fun ImageView.corner(imageUrl: String? = "", redius: Float = 8f, placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
-//    GlideApp.with(this.context)
-//            .load(getGlideUrl(imageUrl))
-//            .placeholder(placeHolder)
-//            .apply(RequestOptions.bitmapTransform(RoundedCornersTransformation(dip(redius), 0,
-//                    RoundedCornersTransformation.CornerType.ALL)))
-//            .into(this)
-//}
-//
-///**
-// * 圆形图
-// */
-//fun ImageView.circle(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
-//    GlideApp.with(this.context)
-//            .load(getGlideUrl(imageUrl))
-//            .placeholder(placeHolder)
-//            .apply(RequestOptions.noTransformation().circleCrop())
-//            .into(this)
-//}
-//
-//fun getGlideUrl(imageUrl: String?): GlideUrl = GlideUrl(if (BuildConfig.DEBUG) DEBUG_API_BASE_URL + "coron-api/" + imageUrl else API_BASE_URL + "coron-api/" + imageUrl, LazyHeaders.Builder().addHeader("Authorization", Hawk.get<Token>(KEY_TOKEN).token).build())
-//
+fun ImageView.loadFromUrl(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
+    GlideApp.with(this.context)
+            .load(getGlideUrl(imageUrl))
+            .placeholder(placeHolder)
+            .fitCenter()
+            .into(this)
+}
+
+/**
+ * 毛玻璃
+ */
+fun ImageView.blur(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
+    GlideApp.with(this.context)
+            .load(getGlideUrl(imageUrl))
+            .placeholder(placeHolder)
+            .apply(RequestOptions.bitmapTransform(BlurTransformation(1, 100)))
+            .into(this)
+}
+
+/**
+ * 圆角
+ *
+ * redius:传dp值
+ */
+fun ImageView.corner(imageUrl: String? = "", redius: Int = 8, placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
+    GlideApp.with(this.context)
+            .load(getGlideUrl(imageUrl))
+            .placeholder(placeHolder)
+            .apply(RequestOptions.bitmapTransform(RoundedCornersTransformation((Resources.getSystem().displayMetrics.density * redius).toInt(), 0,
+                    RoundedCornersTransformation.CornerType.ALL)))
+            .into(this)
+}
+
+/**
+ * 圆形图
+ */
+fun ImageView.circle(imageUrl: String? = "", placeHolder: Int = R.drawable.abc_ab_share_pack_mtrl_alpha) {
+    GlideApp.with(this.context)
+            .load(getGlideUrl(imageUrl))
+            .placeholder(placeHolder)
+            .apply(RequestOptions.noTransformation().circleCrop())
+            .into(this)
+}
+
+fun getGlideUrl(imageUrl: String?): GlideUrl = GlideUrl(if (BuildConfig.DEBUG) DEBUG_API_BASE_URL + "coron-api/" + imageUrl else DEBUG_API_BASE_URL + "coron-api/" + imageUrl, LazyHeaders.Builder().addHeader("Authorization", Hawk.get<String>(KEY_TOKEN)).build())
+
 
 
 /**
