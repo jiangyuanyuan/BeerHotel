@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="nav_text_normal">#999999</color>
+    <color name="nav_text_selected">#B42D08</color>
+    <color name="color_nav">#F5F8FF</color>
+
+    <color name="color_B42D08">#B42D08</color>
+    <color name="color_2B2B33">#2B2B33</color>
+    <color name="color_E7E7E7">#E7E7E7</color>
+    <color name="color_F6F8FB">#F6F8FB</color>
+    <color name="color_E8EAEF">#E8EAEF</color>
+    <color name="color_8D2C12">#8D2C12</color>
+    <color name="color_EBEDF2">#EBEDF2</color>
+    <color name="color_5C5F69">#5C5F69</color>
+    <color name="color_42474E">#42474E</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_EFF2F9">#EFF2F9</color>
+    <color name="color_3A4DFF">#3A4DFF</color>
+    <color name="color_007AFF">#007AFF</color>
+    <color name="color_F5F7FE">#F5F7FE</color>
+    <color name="color_F4C36C">#F4C36C</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_F24724">#F24724</color>
+    <color name="color_F5F8FF">#F5F8FF</color>
+    <color name="color_646464">#646464</color>
+    <!--默认的状态栏-->
+    <color name="multiple_image_select_primaryDark">#000000</color>
+    <!--选中-->
+    <color name="multiple_image_select_primary">#42474E</color>
+    <color name="common_blue">#03a9f4</color>
+    <color name="transparent">#00000000</color>
+    <color name="common_disable">#d9d9d9</color>
+    <color name="common_white">#ffffff</color>
+    <color name="color_DB4437">#DB4437</color>
+    <color name="color_2DBC01">#2DBC01</color>
+    <color name="color_2B2B2B">#2B2B2B</color>
+    <color name="color_181819">#181819</color>
+    <color name="color_858E98">#858E98</color>
+    <color name="color_71AB0B">#71AB0B</color>
+    <color name="color_83C116">#83C116</color>
+    <color name="color_14D69E">#14D69E</color>
+    <color name="color_0AC77E">#0AC77E</color>
+    <color name="color_479DFE">#479DFE</color>
+    <color name="color_C8C8C8">#C8C8C8</color>
+    <color name="color_3A73FF">#3A73FF</color>
+    <color name="color_F7F9FF">#F7F9FF</color>
+    <color name="color_E8EAED">#E8EAED</color>
+    <color name="color_DBDBDB">#DBDBDB</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_D93A0E">#D93A0E</color>
+    <color name="color_666666">#666666</color>
+</resources>

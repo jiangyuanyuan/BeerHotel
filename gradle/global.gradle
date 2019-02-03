@@ -1,0 +1,95 @@
+subprojects {
+    if (project.ignore.toBoolean()) {
+        return
+    }
+    if (project.isApplication.toBoolean()) {
+        project.plugins.apply("com.android.application")
+    } else {
+        project.plugins.apply("com.android.library")
+    }
+
+    project.plugins.apply("kotlin-android")
+    project.plugins.apply("kotlin-android-extensions")
+    project.plugins.apply("kotlin-kapt")
+
+    kapt {
+        correctErrorTypes = true
+        arguments {
+            arg("moduleName", project.getName())
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    android {
+        compileSdkVersion SysConfig.compileSdkVersion
+        defaultConfig {
+            minSdkVersion SysConfig.minSdkVersion
+            targetSdkVersion SysConfig.targetSdkVersion
+            versionCode SysConfig.versionCode
+            versionName SysConfig.versionName
+            //            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "armeabi-v8a"
+            }
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+        signingConfigs {
+            appConfigs {
+                keyAlias 'st801_keystore'
+                keyPassword 'st801_keystore'
+                storeFile file('st801_keystore.keystore')
+                storePassword 'st801_keystore'
+            }
+        }
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                if (project.getName() == "app") {
+                    signingConfig signingConfigs.appConfigs
+                    manifestPlaceholders = [
+                            sharedUserId: "",
+                    ]
+                }
+            }
+            debug_for_rom {
+                if (project.getName() == "app") {
+                    signingConfig signingConfigs.appConfigs
+                    manifestPlaceholders = [
+                            sharedUserId: "",
+                    ]
+                }
+            }
+            debug {
+                if (project.getName() == "app") {
+                    signingConfig signingConfigs.appConfigs
+                    manifestPlaceholders = [
+                            sharedUserId: "",
+                    ]
+                }
+            }
+        }
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs "libs"
+            }
+        }
+
+        repositories {
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+
+}

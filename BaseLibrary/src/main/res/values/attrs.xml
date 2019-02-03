@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StatefulView">
+        <attr name="loadingLayout" format="reference" />
+        <attr name="emptyLayout" format="reference" />
+        <attr name="loadedLayout" format="reference" />
+        <attr name="errorLayout" format="reference" />
+        <attr name="defLayout">
+            <enum name="loadingLayout" value="0" />
+            <enum name="emptyLayout" value="1" />
+            <enum name="loadedLayout" value="2" />
+            <enum name="errorLayout" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <!--HeaderBar自定义属性-->
+    <declare-styleable name="HeaderBar">
+        <attr name="isShowBack" format="boolean"/>
+        <attr name="isShowRight" format="boolean"/>
+        <attr name="isShowCancel" format="boolean"/>
+        <attr name="isShowCamera" format="boolean"/>
+        <attr name="isShowMore" format="boolean"/>
+        <attr name="titleText" format="string"/>
+        <attr name="rightText" format="string"/>
+    </declare-styleable>
+
+</resources>

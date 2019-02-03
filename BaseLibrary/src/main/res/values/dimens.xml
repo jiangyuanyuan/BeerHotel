@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dimen_18dp" tools:ignore="MissingDefaultResource">18dp</dimen>
+    <dimen name="dimen_150dp" tools:ignore="MissingDefaultResource">150dp</dimen>
+    <dimen name="dimen_22dp" tools:ignore="MissingDefaultResource">22dp</dimen>
+    <dimen name="pickerview_textsize">20sp</dimen>
+</resources>

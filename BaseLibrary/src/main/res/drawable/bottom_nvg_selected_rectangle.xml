@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 连框颜色值 -->
+    <item>
+        <shape>
+            <solid android:color="@color/color_DBDBDB" />
+        </shape>
+    </item>
+    <!-- 主体背景颜色值 -->
+    <item android:left="1dp" android:right="1dp">
+        <!--边框里面背景颜色 白色-->
+        <shape>
+            <gradient android:startColor="@color/color_F7F9FF"
+                android:endColor="@color/color_E8EAED" android:angle="270"
+                />
+        </shape>
+    </item>
+</layer-list>
