@@ -97,22 +97,23 @@ project(':BaseLibrary') {
         // 持久化
         implementation 'com.orhanobut:hawk:2.0.1'
 
-        api 'me.yokeyword:fragmentation:1.3.4'
+        api 'me.yokeyword:fragmentation:1.3.6'
+        api 'me.yokeyword:fragmentation-swipeback:1.3.6'
         implementation 'com.github.JamieCruwys:StatefulView:-SNAPSHOT'
 
     }
 }
 
 
-//project(':provider') {
-//    dependencies {
-//        //implementation fileTree(dir: 'libs', include: ['*.jar'])
-//        implementation Deps.kotlinStdlibJdk8
-//
-//        //ARouter
-//        implementation Deps.arouter
-//    }
-//}
+project(':Provider') {
+    dependencies {
+        //implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation Deps.kotlinStdlibJdk8
+
+        //ARouter
+        implementation Deps.arouter
+    }
+}
 
 
 project(':app') {
@@ -161,7 +162,7 @@ project(':app') {
 ////    implementation 'com.iwith.pad:toft:0.0.1-SNAPSHOT'
 //
         implementation project(':BaseLibrary')
-//        implementation project(':provider')
+        implementation project(':Provider')
 //        implementation project(':widget_robot_action')
         // Rx绑定生命周期
 //        implementation 'com.iwith.pad:likelive:0.0.2-SNAPSHOT'

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/activity_bg">
+
+
+    <com.beer.baselibrary.view.HeaderBar
+        android:id="@+id/headerBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:isShowBack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="我的" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        app:srlEnablePureScrollMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/headerBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/my_item_bg">
+
+                <com.iwith.family.widget.MyItemView
+                    android:id="@+id/mInfoMiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:imgSrc="@mipmap/icon_mine_head" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/my_item_bg">
+
+                <com.iwith.family.widget.MyItemView
+                    android:id="@+id/mPhotoMiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:imgSrc="@mipmap/icon_photo_normal"
+                    app:titleText="我的相册" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/my_item_bg"
+                android:orientation="vertical">
+
+
+                <com.iwith.family.widget.MyItemView
+                    android:id="@+id/mFamilyMiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:imgSrc="@mipmap/icon_family"
+                    app:titleText="家庭成员管理" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_EBEDF2" />
+
+                <com.iwith.family.widget.MyItemView
+                    android:id="@+id/mSettingMiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:imgSrc="@mipmap/icon_set"
+                    app:titleText="设置" />
+
+
+            </LinearLayout>
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="68dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:background="@mipmap/my_item_bg">-->
+
+                <!--<com.iwith.family.widget.MyItemView-->
+                    <!--android:id="@+id/mFamilyMiv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--app:imgSrc="@mipmap/icon_family"-->
+                    <!--app:titleText="家庭成员管理" />-->
+
+            <!--</FrameLayout>-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="68dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:background="@mipmap/my_item_bg">-->
+
+                <!--<com.iwith.family.widget.MyItemView-->
+                    <!--android:id="@+id/mSettingMiv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--app:imgSrc="@mipmap/icon_set"-->
+                    <!--app:titleText="设置" />-->
+
+            <!--</FrameLayout>-->
+
+        </LinearLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

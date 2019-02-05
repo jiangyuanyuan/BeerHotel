@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyItemView">
+        <attr name="titleText" format="string"/>
+        <attr name="imgSrc" format="reference"/>
+        <attr name="isShowTopLine" format="boolean"/>
+        <attr name="isShowBottomLine" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekBarView">
+        <attr name="week_text_color" format="color"/>
+        <attr name="week_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MonthCalendarView">
+        <attr name="month_selected_text_color" format="color"/>
+        <attr name="month_selected_circle_color" format="color"/>
+        <attr name="month_selected_circle_today_color" format="color"/>
+        <attr name="month_normal_text_color" format="color"/>
+        <attr name="month_today_text_color" format="color"/>
+        <attr name="month_lunar_text_color" format="color"/>
+        <attr name="month_hint_circle_color" format="color"/>
+        <attr name="month_holiday_color" format="color"/>
+        <attr name="month_last_or_next_month_text_color" format="color"/>
+        <attr name="month_day_text_size" format="integer"/>
+        <attr name="month_day_lunar_text_size" format="integer"/>
+        <attr name="month_show_task_hint" format="boolean"/>
+        <attr name="month_show_lunar" format="boolean"/>
+        <attr name="month_show_holiday_hint" format="boolean"/>
+        <attr name="month_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekCalendarView">
+        <attr name="week_selected_text_color" format="color"/>
+        <attr name="week_selected_circle_color" format="color"/>
+        <attr name="week_selected_circle_today_color" format="color"/>
+        <attr name="week_normal_text_color" format="color"/>
+        <attr name="week_today_text_color" format="color"/>
+        <attr name="week_hint_circle_color" format="color"/>
+        <attr name="week_holiday_color" format="color"/>
+        <attr name="week_lunar_text_color" format="color"/>
+        <attr name="week_day_text_size" format="dimension"/>
+        <attr name="week_day_lunar_text_size" format="integer"/>
+        <attr name="week_show_task_hint" format="boolean"/>
+        <attr name="week_show_lunar" format="boolean"/>
+        <attr name="week_show_holiday_hint" format="boolean"/>
+        <attr name="week_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PickerView">
+        <attr name="wheelview_gravity">
+            <enum name="center" value="17"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+        </attr>
+        <attr name="wheelview_unitText" format="string"/>
+        <attr name="wheelview_textSize" format="dimension"/>
+        <attr name="wheelview_dividerSize" format="dimension"/>
+        <attr name="wheelview_textColorOut" format="color"/>
+        <attr name="wheelview_textColorCenter" format="color"/>
+        <attr name="wheelview_dividerColor" format="color"/>
+        <attr name="wheelview_lineSpacingMultiplier" format="float"/>
+    </declare-styleable>
+
+</resources>
