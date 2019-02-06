@@ -193,6 +193,8 @@ project(':app') {
         // 持久化
         implementation 'com.orhanobut:hawk:2.0.1'
 
+        implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+
 //        // 毛玻璃
 //        implementation 'jp.wasabeef:glide-transformations:3.3.0'
 //
