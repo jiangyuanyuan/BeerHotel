@@ -204,6 +204,25 @@ project(':app') {
 //        //水波紋
 //        implementation 'com.yalantis:eqwaves:1.0.1'
 
+
+        //地图
+//        implementation 'com.amap.api:3dmap:latest.integration'
+//
+//        implementation 'com.amap.api:map2d:latest.integration'
+//
+//        implementation 'com.amap.api:navi-3dmap:latest.integration'
+//
+//        implementation 'com.amap.api:search:latest.integration'
+//
+//        implementation 'com.amap.api:location:latest.integration'
+
+        //3D地图so及jar
+        implementation 'com.amap.api:3dmap:latest.integration'
+        //定位功能
+        implementation 'com.amap.api:location:latest.integration'
+        //搜索功能
+        implementation 'com.amap.api:search:latest.integration'
+
     }
 }
 
