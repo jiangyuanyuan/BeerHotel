@@ -43,10 +43,10 @@ subprojects {
 
         signingConfigs {
             appConfigs {
-                keyAlias 'st801_keystore'
-                keyPassword 'st801_keystore'
-                storeFile file('st801_keystore.keystore')
-                storePassword 'st801_keystore'
+                keyAlias 'key'
+                keyPassword '123456'
+                storeFile file('key.jks')
+                storePassword '123456'
             }
         }
 

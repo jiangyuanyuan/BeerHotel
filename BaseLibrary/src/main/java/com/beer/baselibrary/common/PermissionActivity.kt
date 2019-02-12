@@ -4,7 +4,6 @@ import android.Manifest
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.widget.Toast
-import com.beer.baselibrary.common.BaseActivity
 import com.beer.baselibrary.R
 import permissions.dispatcher.*
 
