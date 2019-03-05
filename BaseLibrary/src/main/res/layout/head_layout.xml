@@ -3,59 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="68dp"
-    android:background="@mipmap/head_bg">
+    android:layout_height="47dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/common_white">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="47dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <!--<TextView-->
+            <!--android:id="@+id/mBackTv"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@drawable/header_btn_selector"-->
+            <!--android:drawableLeft="@mipmap/ic_header_back"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingStart="5dp"-->
+            <!--android:paddingEnd="5dp"-->
+            <!--android:text="返回"-->
+            <!--android:visibility="gone"-->
+            <!--android:textColor="@color/color_4A4A4A"-->
+            <!--android:textSize="20dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <ImageView
             android:id="@+id/mBackTv"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/header_btn_selector"
-            android:drawableLeft="@mipmap/ic_header_back"
-            android:gravity="center"
-            android:paddingStart="5dp"
-            android:paddingEnd="5dp"
-            android:text="返回"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:src="@mipmap/common_anv_back"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/mCancelTv"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/header_btn_selector"
-            android:gravity="center"
-            android:text="取消"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            />
+        <!--<TextView-->
+            <!--android:id="@+id/mCancelTv"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:background="@drawable/header_btn_selector"-->
+            <!--android:gravity="center"-->
+            <!--android:text="取消"-->
+            <!--android:textColor="@color/color_4A4A4A"-->
+            <!--android:textSize="20dp"-->
+            <!--android:visibility="gone"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
 
         <TextView
             android:id="@+id/mTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="登录"
-            android:textColor="@android:color/white"
-            android:textSize="24dp"
+            android:textColor="@color/color_4A4A4A"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
 
         <TextView
             android:id="@+id/mRightTv"
@@ -67,9 +80,9 @@
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
             android:text="保存"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:visibility="visible"
+            android:textColor="@color/color_4A4A4A"
+            android:textSize="18sp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -105,10 +118,10 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/icon_more" />
+                app:srcCompat="@mipmap/set_up" />
 
         </FrameLayout>
 

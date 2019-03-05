@@ -1,4 +1,4 @@
-package com.beer.baselibrary;
+package com.ope.base;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.beer.baselibrary.test", appContext.getPackageName());
+        assertEquals("com.ope.base.test", appContext.getPackageName());
     }
 }

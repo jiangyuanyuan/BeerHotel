@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:background="@android:color/white">
+
+
+    <ImageView
+        android:id="@+id/mCurrencyIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp"
+        tools:src="@mipmap/btc"
+        />
+
+    <TextView
+        android:id="@+id/mCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="Chufa"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/mCurrencyIcon"
+        android:textColor="@color/color_4A4A4A"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="1,234,566.89"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/mCurrencyIcon"
+        android:layout_below="@+id/mCurrencyName"
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        >
+        <TextView
+            android:clickable="true"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="收币"
+            android:layout_centerVertical="true"
+            android:background="@drawable/login_blue_shape"
+            android:layout_toLeftOf="@+id/mCoinCollection"
+            android:layout_marginRight="12dp"
+            />
+
+        <TextView
+            android:id="@+id/mCoinCollection"
+            android:clickable="true"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="转币"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/login_blue_shape"
+            />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/mOpeningSoon"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="即将开放..."
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:layout_alignParentRight="true"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/activity_bg">
+
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:isShowBack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="重设资产密码" />
+
+
+
+    <EditText
+        android:id="@+id/mPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="@drawable/login_gray_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="33dp"
+        android:hint="新资产密码6位纯数字"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/mPasswordAgain"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="@drawable/login_gray_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="确认密码"
+        app:layout_constraintTop_toBottomOf="@+id/mPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/mSubmit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="确认"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:textColor="@color/color_3D8DDF"
+        android:background="@drawable/login_blue_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/mPasswordAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

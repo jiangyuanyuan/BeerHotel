@@ -1,4 +1,4 @@
-package com.beer.baselibrary;
+package com.ope.base;
 
 import org.junit.Test;
 

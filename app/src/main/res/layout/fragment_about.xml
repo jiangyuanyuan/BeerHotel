@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/activity_bg">
 
-    <com.beer.baselibrary.view.HeaderBar
+    <com.ope.base.view.HeaderBar
         android:id="@+id/mHeaderBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
