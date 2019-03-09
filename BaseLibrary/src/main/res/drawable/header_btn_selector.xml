@@ -3,11 +3,11 @@
 
     <item
         android:state_pressed="false"
-        android:drawable="@mipmap/header_btn_default"
+        android:drawable="@color/common_white"
         />
     <item
         android:state_pressed="true"
-        android:drawable="@mipmap/header_btn_pressed"
+        android:drawable="@color/color_3A73FF"
         />
 
 </selector>

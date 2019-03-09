@@ -15,6 +15,7 @@ class HeaderBar @JvmOverloads constructor(
 
     //是否显示"右边"图标
     private var isShowRight = true
+    private var isShowBack = true
 
     //是否显示"拍照"图标
     private var isShowCamera = true
@@ -30,7 +31,7 @@ class HeaderBar @JvmOverloads constructor(
         //获取自定义属性
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.HeaderBar)
 
-//        isShowBack = typedArray.getBoolean(R.styleable.HeaderBar_isShowBack,true)
+        isShowBack = typedArray.getBoolean(R.styleable.HeaderBar_isShowBack,true)
         isShowRight = typedArray.getBoolean(R.styleable.HeaderBar_isShowRight,false)
 //        isShowCancel = typedArray.getBoolean(R.styleable.HeaderBar_isShowCancel,false)
         isShowCamera = typedArray.getBoolean(R.styleable.HeaderBar_isShowCamera,false)
@@ -47,7 +48,7 @@ class HeaderBar @JvmOverloads constructor(
     private fun initView() {
         View.inflate(context,R.layout.head_layout,this)
 
-//        mBackTv.visibility = if (isShowBack) View.VISIBLE else View.GONE
+        mBackTv.visibility = if (isShowBack) View.VISIBLE else View.GONE
         mRightTv.visibility = if (isShowRight) View.VISIBLE else View.GONE
 //        if (isShowCancel){
 //            mCancelTv.visibility = View.VISIBLE

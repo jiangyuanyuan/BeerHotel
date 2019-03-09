@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/common_white">
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="交易记录"/>
+
+    <RelativeLayout
+        android:id="@+id/mAlltypeRl"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="23dp"
+        >
+        <TextView
+            android:id="@+id/mAlltype"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="全部类型"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mAlltype"
+            android:src="@mipmap/record_icon_down"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mTimelengthRl"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="23dp"
+        >
+        <TextView
+            android:id="@+id/mTimelength"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="时间倒序"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mTimelength"
+            android:src="@mipmap/record_icon_down"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/mTimeorderRl"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="23dp"
+        >
+        <TextView
+            android:id="@+id/mTimeorder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="时间倒序"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mTimeorder"
+            android:src="@mipmap/record_icon_screen"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mAlltypeRl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_trade_history"
+        ></android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.ConstraintLayout>

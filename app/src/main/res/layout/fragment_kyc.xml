@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:orientation="vertical"
+    >
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="身份认证"/>
+
+
+    <RelativeLayout
+        android:id="@+id/mKyc1Rl"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/common_white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp"
+        android:layout_marginTop="1dp"
+        >
+        <View
+            android:id="@+id/line"
+            android:layout_width="3dp"
+            android:layout_height="13dp"
+            android:background="@color/color_3D8DDF"
+            android:layout_marginTop="4dp"
+            />
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F5F5F5"
+            android:layout_marginTop="36dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KYC-1 实名认证"
+            android:textSize="16sp"
+            android:textColor="@color/color_333333"
+            android:layout_toRightOf="@+id/line"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/mKycInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实名认证的用户单笔交易不超过2000元人"
+            android:textSize="16sp"
+            android:textColor="@color/color_666666"
+            android:layout_below="@+id/line2"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mKycInfo1"
+            android:layout_marginTop="16dp"
+            android:text="张*海 421***431"
+            android:textColor="@color/color_666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mKycInfo1"
+            android:layout_marginTop="16dp"
+            android:text="张*海 421***431"
+
+            android:textColor="@color/color_666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已认证"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_3D8DDF"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/blue4_white_shape"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mKyc2Rl"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/common_white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp"
+        >
+        <View
+            android:id="@+id/line3"
+            android:layout_width="3dp"
+            android:layout_height="13dp"
+            android:background="@color/color_3D8DDF"
+            android:layout_marginTop="4dp"
+            />
+        <View
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F5F5F5"
+            android:layout_marginTop="36dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KYC-2 证照认证"
+            android:textSize="16sp"
+            android:textColor="@color/color_333333"
+            android:layout_toRightOf="@+id/line3"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/mKycInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通过高级认证的用户单笔交易不超过5000人民币，每日交易不超过2000000元人民币"
+            android:textSize="16sp"
+            android:textColor="@color/color_666666"
+            android:layout_below="@+id/line4"
+            android:layout_marginTop="16dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即认证>"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_3D8DDF"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mKyc3Rl"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/common_white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp"
+        >
+        <View
+            android:id="@+id/line5"
+            android:layout_width="3dp"
+            android:layout_height="13dp"
+            android:background="@color/color_3D8DDF"
+            android:layout_marginTop="4dp"
+            />
+        <View
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_F5F5F5"
+            android:layout_marginTop="36dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KYC-3 视频认证"
+            android:textSize="16sp"
+            android:textColor="@color/color_333333"
+            android:layout_toRightOf="@+id/line5"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/mKycInfo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通过高级认证的用户单笔交易不超过5000000元人民币"
+            android:textSize="16sp"
+            android:textColor="@color/color_666666"
+            android:layout_below="@+id/line6"
+            android:layout_marginTop="16dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请与Xchufa客服联系"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_3D8DDF"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

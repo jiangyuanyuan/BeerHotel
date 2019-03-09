@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white">
+
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="绑定支付宝账号" />
+
+
+
+
+
+    <EditText
+        android:id="@+id/mName"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="@drawable/gray4_white_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="真实姓名"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/mPayAccount"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="@drawable/gray4_white_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="支付宝账号"
+        app:layout_constraintTop_toBottomOf="@+id/mName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/mSubmit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="确定"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:textColor="@color/color_3D8DDF"
+        android:background="@drawable/blue4_white_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/mDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/mDelete"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="删除"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:clickable="true"
+        android:textColor="@color/color_3D8DDF"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:text="上传二维码"
+        android:gravity="center"
+        android:textColor="@color/color_3D8DDF"
+        android:background="@drawable/blue29_white_shape"
+        app:layout_constraintTop_toBottomOf="@+id/mPayAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        />
+    
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="234dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPayAccount"
+        android:layout_marginTop="89dp"
+        android:src="@mipmap/icon_alipay_code"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

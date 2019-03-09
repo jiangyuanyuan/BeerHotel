@@ -4,18 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/activity_bg">
+    android:background="@color/common_white">
 
 
     <com.ope.base.view.HeaderBar
         android:id="@+id/mHeaderBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:isShowBack="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleText="重设资产密码" />
+
+    <EditText
+        android:id="@+id/mOldPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:background="@drawable/gray4_white_shape"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="33dp"
+        android:hint="原始资产密码"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 
 
 
@@ -25,12 +41,12 @@
         android:layout_height="45dp"
         android:textSize="15sp"
         android:padding="12dp"
-        android:background="@drawable/login_gray_shape"
+        android:background="@drawable/gray4_white_shape"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="10dp"
         android:hint="新资产密码6位纯数字"
-        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintTop_toBottomOf="@+id/mOldPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -41,7 +57,7 @@
         android:layout_height="45dp"
         android:textSize="15sp"
         android:padding="12dp"
-        android:background="@drawable/login_gray_shape"
+        android:background="@drawable/gray4_white_shape"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp"
@@ -62,7 +78,7 @@
         android:padding="12dp"
         android:clickable="true"
         android:textColor="@color/color_3D8DDF"
-        android:background="@drawable/login_blue_shape"
+        android:background="@drawable/blue4_white_shape"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="48dp"

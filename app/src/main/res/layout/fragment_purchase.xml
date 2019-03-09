@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white">
+
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="买入Chufa" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mPurchaseInfoCl"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/mTabItemIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/common_img_contacts"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/mTabItemIcon"
+            android:text="中本聪2号"
+            android:textColor="@color/color_333333"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            />
+        <TextView
+            android:id="@+id/mStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/mTabItemIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="库存：1,283.8492 Chufa"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            />
+
+        <TextView
+            android:id="@+id/mQuota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/mStock"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="单笔限额：100～5000 C"
+            android:textColor="@color/color_666666"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/mUnitPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="单价：6.89 CNY"
+            android:textColor="@color/color_333333"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            />
+        <ImageView
+            android:id="@+id/mAliPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/mWeChatPayIcon"
+            app:layout_constraintTop_toBottomOf="@+id/mUnitPrice"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_alipay"
+            />
+
+        <ImageView
+            android:id="@+id/mWeChatPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/mBankPayIcon"
+            app:layout_constraintTop_toBottomOf="@+id/mUnitPrice"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_wechat"
+            />
+
+        <ImageView
+            android:id="@+id/mBankPayIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/mBankTv"
+            app:layout_constraintTop_toBottomOf="@+id/mUnitPrice"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_bank"
+            />
+
+        <TextView
+            android:id="@+id/mBankTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中信银行"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mUnitPrice"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mPurchaseExchangeRl"
+        android:layout_width="129dp"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/color_F5F5F5"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="37dp"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0.00"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_marginLeft="11dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:text="CNY"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="129dp"
+        android:layout_height="36dp"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/color_F5F5F5"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="37dp"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0.00"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:layout_marginLeft="11dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:text="CNY"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/record_icon_screen"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/mPurchaseExchangeRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*您设置的金额小于对方设置的最小交易额！"
+        android:textColor="@color/color_8D2C12"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseExchangeRl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/mPurchaseExchange15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="该订单需要您在15分钟内进行支付"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseExchangeRed"/>
+    
+    
+    <TextView
+        android:id="@+id/mPurchaseExchange60"
+        android:layout_width="161dp"
+        android:layout_height="45dp"
+        android:text="60s 取消"
+        android:gravity="center"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseExchange15"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/gray4_white_shape"
+        android:textSize="15sp"
+        />
+    <TextView
+        android:id="@+id/mPurchaseOk"
+        android:layout_width="161dp"
+        android:layout_height="45dp"
+        android:text="下单"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="@color/common_white"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseExchange15"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/color_3D8DDF"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/mRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卖家备注："
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseExchange60"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="20dp"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你好，付款时请备注随机码"
+        app:layout_constraintTop_toBottomOf="@+id/mRemarks"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp"
+        android:textSize="12sp"
+        />
+
+</android.support.constraint.ConstraintLayout>

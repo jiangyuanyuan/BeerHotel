@@ -14,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="22dp"
-        tools:src="@mipmap/btc"
+        android:src="@mipmap/btc"
         />
 
     <TextView
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        tools:text="Chufa"
+        android:text="Chufa"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/mCurrencyIcon"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        tools:text="1,234,566.89"
+        android:text="1,234,566.89"
         android:layout_marginTop="2dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/mCurrencyIcon"
@@ -54,7 +54,7 @@
             android:gravity="center"
             android:text="收币"
             android:layout_centerVertical="true"
-            android:background="@drawable/login_blue_shape"
+            android:background="@drawable/blue4_white_shape"
             android:layout_toLeftOf="@+id/mCoinCollection"
             android:layout_marginRight="12dp"
             />
@@ -69,7 +69,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="17dp"
-            android:background="@drawable/login_blue_shape"
+            android:background="@drawable/blue4_white_shape"
             />
 
 

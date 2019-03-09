@@ -81,7 +81,7 @@
             android:paddingEnd="5dp"
             android:text="保存"
             android:textColor="@color/color_4A4A4A"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@mipmap/set_up" />
+                app:srcCompat="@mipmap/common_anv_icon_service" />
 
         </FrameLayout>
 

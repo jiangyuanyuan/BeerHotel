@@ -24,14 +24,7 @@ class WelcomeActivity : PermissionActivity() {
                 .subscribe {
                     ARouter.getInstance().build(RouterPath.MyCenter.PATH_LOGIN).navigation()
                     finish()
-
-//                    ARouter.getInstance().build(RouterPath.MyCenter.PATH_REGISTER).navigation() as ISupportFragment
-
                 }
-
-
-
-
 
     }
 }

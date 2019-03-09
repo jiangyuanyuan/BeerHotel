@@ -3,12 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.ope.xchufa.MainActivity">
+    android:layout_height="match_parent">
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="数据"/>
-
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mMainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mNavigation"
+        />
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/mNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:menu="@menu/menu_bottom_navigation"
+        />
+    <include layout="@layout/guide"/>
 </android.support.constraint.ConstraintLayout>

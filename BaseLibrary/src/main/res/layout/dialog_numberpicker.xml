@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:background="@color/common_white">
+
+<TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="18sp"
+    android:textColor="@color/color_4A4A4A"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/yes"
+    app:layout_constraintBottom_toBottomOf="@id/yes"
+    tools:text="提示" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="确定"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:textColor="@color/color_3D8DDF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="取消"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/color_999999"
+        android:textSize="16sp" />
+
+
+
+    <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:wheel_indicator="true"
+
+        app:wheel_curtain_color="@color/color_666666"
+        app:wheel_indicator_color="@color/color_F5F5F5"
+        app:wheel_selected_item_text_color="@color/color_333333"
+        app:layout_constraintTop_toBottomOf="@+id/yes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>

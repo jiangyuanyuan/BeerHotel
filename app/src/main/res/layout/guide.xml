@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/mGuide"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clickable="true"
+android:background="@color/color_66000000"
+    >
+<ImageView
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="18dp"
+    android:layout_marginLeft="5dp"
+    android:src="@mipmap/home_tips"
+    />
+<ImageView
+    android:id="@+id/arrow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="73dp"
+    android:layout_marginLeft="42dp"
+    android:src="@mipmap/arrow"
+    />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="点击这里切换到币商客户端"
+        android:textColor="@color/common_white"
+        android:layout_below="@+id/arrow"
+        android:layout_marginLeft="120dp"
+        />
+<TextView
+    android:id="@+id/mGuideOk"
+    android:layout_width="101dp"
+    android:layout_height="41dp"
+    android:text="知道了"
+    android:textSize="18sp"
+    android:textColor="@color/common_white"
+    android:gravity="center"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="51dp"
+    android:background="@drawable/guide_white_shape"
+    />
+</RelativeLayout>

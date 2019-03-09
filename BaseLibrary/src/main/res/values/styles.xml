@@ -13,6 +13,7 @@
 
     </style>
 
+
     <!--全屏-->
     <style name="FullScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
@@ -60,5 +61,12 @@
         <item name="android:textColor">@drawable/common_btn_text_white_selector</item>
         <item name="android:textSize">24dp</item>
     </style>
+
+    <style name="MyDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 
 </resources>

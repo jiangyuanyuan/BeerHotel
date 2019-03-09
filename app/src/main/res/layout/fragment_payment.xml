@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_F5F5F5"
+    >
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        app:isShowRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="收款账号" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/mRecyclerViewCc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F5F5F5"
+                app:layout_constraintTop_toTopOf="@+id/mRecyclerViewCc"
+                tools:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_payment"/>
+
+
+
+            <View
+                android:id="@+id/mView"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/mRecyclerView"
+                android:background="@drawable/gray5_gray_shape"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/mView"
+                app:layout_constraintBottom_toBottomOf="@+id/mView"
+                app:layout_constraintStart_toStartOf="@+id/mView"
+                app:layout_constraintEnd_toEndOf="@+id/mView"
+                android:src="@mipmap/nav_icon_add"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/mDelete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="删除"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/blue4_white_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/color_3D8DDF"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        />
+
+</LinearLayout>

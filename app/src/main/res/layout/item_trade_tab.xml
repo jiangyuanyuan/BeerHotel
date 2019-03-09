@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="121dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white">
+
+<ImageView
+    android:id="@+id/mTabItemIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="19dp"
+    android:layout_marginTop="12dp"
+    android:src="@mipmap/common_img_contacts"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/mTabItemIcon"
+        android:text="中本聪2号"
+        android:textColor="@color/color_333333"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        />
+    <TextView
+        android:id="@+id/mStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mTabItemIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="库存：1,283.8492 Chufa"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        />
+
+    <TextView
+        android:id="@+id/mQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mStock"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="单笔限额：100～5000 C"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/mAliPayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mQuota"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="9dp"
+        android:src="@mipmap/icon_alipay"
+        />
+
+    <ImageView
+        android:id="@+id/mWeChatPayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/mAliPayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/mQuota"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="9dp"
+        android:src="@mipmap/icon_wechat"
+        />
+
+    <ImageView
+        android:id="@+id/mBankPayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/mWeChatPayIcon"
+        app:layout_constraintTop_toBottomOf="@+id/mQuota"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="9dp"
+        android:src="@mipmap/icon_bank"
+        />
+
+
+    <TextView
+        android:id="@+id/mUnitPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="单价：6.89 CNY"
+        android:textColor="@color/color_333333"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        />
+
+    <TextView
+        android:id="@+id/mPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:text="买入"
+        android:textColor="@color/color_3D8DDF"
+        app:layout_constraintTop_toBottomOf="@+id/mUnitPrice"
+        android:background="@drawable/blue4_white_shape"
+        android:padding="6dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>

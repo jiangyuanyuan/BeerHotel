@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/mExchangeRg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="31dp"
+        >
+        <RadioButton
+            android:layout_width="77dp"
+            android:layout_height="25dp"
+            android:text="收币"/>
+        <RadioButton
+            android:layout_width="77dp"
+            android:layout_height="25dp"
+            android:text="转币"
+            />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mQRcode"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/color_666666"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp"
+            />
+
+        <TextView
+            android:id="@+id/mQRcodeSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mQRcode"
+            android:layout_centerHorizontal="true"
+            android:text="长按图片保存到相册"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/mScanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mQRcodeSave"
+            android:layout_centerHorizontal="true"
+            android:text="扫一扫向我转币"
+            android:textSize="15sp"
+            android:textColor="@color/color_333333"
+            android:layout_marginTop="28dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mScanning"
+            android:layout_centerHorizontal="true"
+            android:text="zhanghai 0393"
+            android:textSize="15sp"
+            android:textColor="@color/color_333333"
+            android:layout_marginTop="19dp"
+            />
+
+    </RelativeLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mLogoDetails"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/logo_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="16dp"
+            />
+
+        <TextView
+            android:id="@+id/mBalanceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/mLogoDetails"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="余额（Chufa）"
+            android:layout_marginTop="26dp"
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/color_666666"
+            />
+        <TextView
+            android:id="@+id/mBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/mLogoDetails"
+            app:layout_constraintTop_toBottomOf="@+id/mBalanceName"
+            android:text="2,321,544.56"
+            android:textSize="18sp"
+            android:layout_marginLeft="9dp"
+            android:textColor="@color/color_4A4A4A"
+            />
+
+
+        <TextView
+            android:id="@+id/mAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mBalance"
+            android:text="收币账号"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color_333333"
+            />
+
+        <View
+            android:id="@+id/mView"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/mAccountName"
+            android:background="@color/color_F3F3F3"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="15dp"
+            ></View>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/mView"
+            app:layout_constraintBottom_toBottomOf="@+id/mView"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="45dp"
+            android:hint="填写收币人的 Xchufa 账号"
+            android:background="@null"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/mView"
+            app:layout_constraintBottom_toBottomOf="@+id/mView"
+            app:layout_constraintEnd_toEndOf="@+id/mView"
+            android:src="@mipmap/pop_close"
+            />
+
+
+        <TextView
+            android:id="@+id/mAccountSumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mView"
+            android:text="数量 (Chufa)"
+            android:textSize="16sp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color_333333"
+            />
+
+        <TextView
+            android:id="@+id/mAccountSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mAccountSumName"
+            android:text="1.235542342"
+            android:textSize="28sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color_333333"
+            />
+
+        <View
+            android:id="@+id/mView2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/mAccountSum"
+            android:background="@color/color_F3F3F3"
+            android:layout_marginTop="9dp"
+            ></View>
+
+        <TextView
+            android:id="@+id/mRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mView2"
+            android:text="备注（选填）"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/color_666666"
+            />
+
+        <View
+            android:id="@+id/mView3"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/mRemarks"
+            android:background="@color/color_F3F3F3"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="15dp"
+            ></View>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/mView3"
+            app:layout_constraintBottom_toBottomOf="@+id/mView3"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="45dp"
+            android:hint="填写备注"
+            android:background="@null"
+            />
+
+        <View
+            android:id="@+id/mView4"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/mView3"
+            android:background="@color/color_F3F3F3"
+            android:layout_marginTop="23dp"
+            ></View>
+
+        <TextView
+            android:id="@+id/mServiceChargeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手续费(0.6%)"
+            app:layout_constraintTop_toBottomOf="@+id/mView4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp"
+            android:textColor="@color/color_666666"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/mServiceChargeName"
+            app:layout_constraintTop_toBottomOf="@+id/mView4"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/common_icon_icon"
+            />
+        <TextView
+            android:id="@+id/mServiceCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.1234 Chufa"
+            app:layout_constraintTop_toBottomOf="@+id/mView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/color_666666"
+            />
+
+        <View
+            android:id="@+id/mView5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/mServiceChargeName"
+            android:background="@color/color_F3F3F3"
+            android:layout_marginTop="16dp"
+            ></View>
+        
+        
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@+id/mView5"
+            android:text="转币"
+            android:textSize="16sp"
+            android:textColor="@color/color_3D8DDF"
+            android:gravity="center"
+            android:background="@drawable/blue4_white_shape"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="27dp"
+            android:clickable="true"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

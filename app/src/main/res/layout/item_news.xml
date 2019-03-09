@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_marginTop="1dp"
+    android:background="@android:color/white">
+
+
+    <ImageView
+        android:id="@+id/mCurrencyIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp"
+        android:src="@mipmap/news_notice_icon"
+        />
+
+    <TextView
+        android:id="@+id/mCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="交易提醒"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/mCurrencyIcon"
+        android:textColor="@color/color_4A4A4A"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="买入的1000.00 Chufa已到账，"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/mCurrencyIcon"
+        android:layout_below="@+id/mCurrencyName"
+
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/mNewsTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018-09-20 12:34"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="17dp"
+        android:layout_alignParentRight="true"/>
+
+
+
+</RelativeLayout>

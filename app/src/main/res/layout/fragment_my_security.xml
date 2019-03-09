@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_F5F5F5">
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="安全设置"/>
+    <RelativeLayout
+        android:id="@+id/mLogin"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        android:background="@color/common_white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="登录密码"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="22dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/common_back_small"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:layout_centerVertical="true"
+            />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mAssets"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        app:layout_constraintTop_toBottomOf="@+id/mLogin"
+        android:background="@color/common_white"
+        android:layout_marginTop="1dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="资产密码"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="22dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/common_back_small"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

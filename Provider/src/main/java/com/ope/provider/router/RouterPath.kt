@@ -22,58 +22,78 @@ object RouterPath {
         }
     }
 
-    //用户模块
-    class UserCenter{
+
+    class Trade{
         companion object {
-            const val PATH_LOGIN = "/UserCenter/Login"
-            const val PATH_QUICK_LOGIN = "/UserCenter/QuickLogin"
-            const val PATH_REGISTER = "/UserCenter/Register"
-            const val PATH_RESET = "/UserCenter/Reset"
-            const val PATH_LOGOUT = "/UserCenter/Logout"
-            const val PATH_USERINFO = "/UserCenter/UserInfo"
+            const val PATH_TRADE = "/Trade/Trade"
+            const val PATH_TRADEHISTORY = "/Trade/TradeHistory"
+            const val PATH_PURCHASE = "/Trade/Purchase"
+            const val PATH_PURCHASEDETAIL = "/Trade/PurchaseDetail"
+            const val PATH_SELLOUT = "/Trade/Sellout"
+            const val PATH_SELLOUTDETAIL = "/Trade/SelloutDetail"
         }
     }
 
-    //家庭成员管理模块
-    class UserManageCenter{
+    class News{
         companion object {
-            const val PATH_MANAGE = "/UserManageCenter/Manage"
-            const val PATH_ADD = "/UserManageCenter/Add"
-            const val PATH_DELETE = "/UserManageCenter/Delete"
+            const val PATH_NEWS = "/News/News"
         }
     }
 
-    //健康
-    class HealthCenter{
+
+    class Exchange{
         companion object {
-            const val PATH_HEALTH = "/HealthCenter/Health"
-            const val PATH_MEASURE = "/HealthCenter/Measure"
+            const val PATH_EXCHANGE = "/Exchange/Exchange"
         }
     }
 
-    //相册
-    class PhotoCenter{
+
+    class Global{
         companion object {
-            const val PATH_PHOTO = "/PhotoCenter/Photo"
-            const val PATH_OTHER = "/PhotoCenter/Other"
-            const val PATH_MY = "/PhotoCenter/My"
-            const val PATH_UPLOAD = "/PhotoCenter/Upload"
+            const val PATH_GLOBAL = "/Global/Global"
+            const val PATH_GLOBALSELLOUTPURCHASE = "/Global/GlobalSelloutPurchase"
         }
     }
+
+//    //家庭成员管理模块
+//    class UserManageCenter{
+//        companion object {
+//            const val PATH_MANAGE = "/UserManageCenter/Manage"
+//            const val PATH_ADD = "/UserManageCenter/Add"
+//            const val PATH_DELETE = "/UserManageCenter/Delete"
+//        }
+//    }
+
+
 
     //我的
     class MyCenter{
         companion object {
             const val PATH_My = "/MyCenter/My"
+            const val PATH_LOGIN = "/MyCenter/Login"
+            const val PATH_LOGINFRAGMENT = "/MyCenter/LoginFragment"
             const val PATH_ABOUT = "/MyCenter/About"
             const val PATH_FEEDBACK = "/MyCenter/Feedback"
             const val PATH_UPDATE = "/MyCenter/Update"
-            const val PATH_LOGIN = "/MyCenter/Login"
             const val PATH_REGISTER = "/MyCenter/Register"
             const val PATH_RETRIEVEPWD = "/MyCenter/RetrievePwd"
-            const val PATH_RELOGIN = "/MyCenter/ReLogin"
+            const val PATH_RESET = "/MyCenter/Reset"
+            const val PATH_RESETLOGINPWD = "/MyCenter/ResetLoginPwd"
+            const val PATH_RESETASSETSPWD = "/MyCenter/ResetAssetsPwd"
             const val PATH_AGREEMENT = "/MyCenter/Agreement"
             const val PATH_DIGITALASSETS = "/MyCenter/DigitalAssets"
+            const val PATH_SECURITY = "/MyCenter/Security"
+
+            const val PATH_KYC = "/MyCenter/Kyc"
+            const val PATH_KYC_REALNAME = "/MyCenter/KycRealName"
+            const val PATH_KYC_CERTIFICATES = "/MyCenter/KycCertificates"
+            const val PATH_KYC_CERTIFICATES_AUSTRALIA = "/MyCenter/KycCertificatesAustralia"
+            const val PATH_KYC_CERTIFICATES_VIDEO = "/MyCenter/KycVideo"
+
+
+            const val PATH_PAYMENT = "/MyCenter/Payment"
+            const val PATH_PAYMENT_ADDALIWECHAT = "/MyCenter/PaymentAddAliWechat"
+            const val PATH_PAYMENT_ADDBANK = "/MyCenter/PaymentAddBank"
         }
     }
 

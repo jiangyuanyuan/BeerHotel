@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/mTradeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_anv_home_business"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="19dp"
+            />
+        
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="77dp"
+                android:layout_height="25dp"
+                android:text="买入"/>
+            <RadioButton
+                android:layout_width="77dp"
+                android:layout_height="25dp"
+                android:text="卖出"
+                />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_anv_home_order"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="26dp"
+            />
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="您有1笔代付款订单    立即处理"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@+id/mTradeHeader"
+        />
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mTradeViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.ope.base.helper
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
@@ -15,8 +16,8 @@ import android.provider.Settings
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
-import android.view.View
-import android.view.ViewGroup
+import android.util.DisplayMetrics
+import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import com.ope.base.view.DefaultTextWatcher
@@ -93,6 +94,7 @@ fun Context.updateLocale(pNewUserLocale: Locale) {
     }
 }
 
+@SuppressLint("InvalidWakeLockTag")
 fun Context.brightScreen() {
     //获取电源管理器对象
     try {
@@ -206,6 +208,21 @@ fun Context.isConnectWifi():Boolean{
 }
 
 fun String.md5() = md5(this)
+
+
+fun Dialog.bottomShow():Unit{
+    this.show()
+    val window = this.window
+    window!!.setGravity(Gravity.BOTTOM)
+    val lp = window.attributes
+    val manager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+    val dm = DisplayMetrics()
+    manager.defaultDisplay.getMetrics(dm)
+    val width = dm.widthPixels
+    lp.width = width
+    window.attributes = lp
+
+}
 
 inline fun <reified T : ViewModel> FragmentActivity.getViewModel() = ViewModelProviders.of(this).get(T::class.java)
 
