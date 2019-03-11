@@ -13,7 +13,10 @@
 
     <!-- android:radius 圆角的半径 -->
     <corners
-        android:radius="2dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="3dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="3dp"
         />
 
 </shape>

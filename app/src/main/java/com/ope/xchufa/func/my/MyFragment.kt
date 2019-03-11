@@ -11,11 +11,8 @@ import com.ope.provider.common.ProviderConstant
 import com.ope.provider.router.RouterPath
 
 import com.jakewharton.rxbinding2.view.RxView
+import com.ope.xchufa.injection.*
 import com.ope.xchufa.injection.component.DaggerAppComponent
-import com.ope.xchufa.injection.mDigitalAssetsFragment
-import com.ope.xchufa.injection.mKycFragment
-import com.ope.xchufa.injection.mPaymentFragment
-import com.ope.xchufa.injection.mSecurityFragment
 import com.orhanobut.hawk.Hawk
 import com.tencent.bugly.crashreport.CrashReport
 import kotlinx.android.synthetic.main.fragment_my.*
@@ -37,8 +34,6 @@ class MyFragment : BaseFragment() {
 //    private lateinit var manageViewModel: ManageViewModel
 
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        viewModel = ViewModelProviders.of(_mActivity, viewModelFactory).get(UserViewModel::class.java)
@@ -47,8 +42,22 @@ class MyFragment : BaseFragment() {
         RxView.clicks(mDigitalAssetsRl)
                 .compose(applyWidgetSchedulers())
                 .subscribe {
-                    (parentFragment as SupportFragment).start(mDigitalAssetsFragment as ISupportFragment)
+                    (parentFragment as SupportFragment).start(mAssetsDigitalFragment as ISupportFragment)
                 }
+
+        RxView.clicks(mTransactionRecordRl)
+                .compose(applyWidgetSchedulers())
+                .subscribe {
+                    (parentFragment as SupportFragment).start(mTradeHistoryFragment as ISupportFragment)
+                }
+
+        RxView.clicks(mLegalAssetsRl)
+                .compose(applyWidgetSchedulers())
+                .subscribe {
+                    (parentFragment as SupportFragment).start(mAssetsLegalFragment as ISupportFragment)
+                }
+
+
 
         RxView.clicks(mSecuritySettingRl)
                 .compose(applyWidgetSchedulers())
@@ -68,7 +77,6 @@ class MyFragment : BaseFragment() {
                 .subscribe {
                     (parentFragment as SupportFragment).start(mPaymentFragment as ISupportFragment)
                 }
-
 
 
     }

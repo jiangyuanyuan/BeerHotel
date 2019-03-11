@@ -12,10 +12,11 @@ import com.ope.base.easy.EasyAdapter
 import com.ope.provider.router.RouterPath
 import com.ope.xchufa.R
 import com.ope.xchufa.injection.component.DaggerAppComponent
-import kotlinx.android.synthetic.main.fragment_tab.*
-import kotlinx.android.synthetic.main.item_trade_tab.view.*
+import com.ope.xchufa.injection.mGlobalSelloutPurchaseFragment
+import kotlinx.android.synthetic.main.fragment_global.*
 import me.yokeyword.fragmentation.ISupportFragment
 import me.yokeyword.fragmentation.SupportActivity
+
 
 @Route(path = RouterPath.Global.PATH_GLOBAL)
 class GlobalFragment : BaseFragment(){
@@ -28,19 +29,24 @@ class GlobalFragment : BaseFragment(){
 
     private val mList = mutableListOf<String>()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         mList.clear()
+        mList.add("hhh")
+        mList.add("hhh")
         mList.add("hhh")
         mList.add("hhh")
         mList.add("hhh")
 
 
         mRecyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL,false)
-        mRecyclerView.adapter = EasyAdapter(R.layout.item_trade_tab, {itemView,item,m->
-            itemView.setOnClickListener {
-                (activity as SupportActivity).start( ARouter.getInstance().build(RouterPath.Trade.PATH_SELLOUT).navigation() as ISupportFragment)
-            }
+        mRecyclerView.adapter = EasyAdapter(R.layout.item_global, {itemView,item,m->
+                        itemView.setOnClickListener {
+//                (activity as SupportActivity).start( mGlobalSelloutPurchaseFragment)
+                            (activity as SupportActivity).start( ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL_SELLOUTPURCHASE).navigation() as ISupportFragment)
+
+                        }
         }, mList)
     }
 }

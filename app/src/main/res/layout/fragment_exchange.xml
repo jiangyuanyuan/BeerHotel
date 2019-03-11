@@ -14,12 +14,21 @@
         android:layout_marginTop="31dp"
         >
         <RadioButton
-            android:layout_width="77dp"
-            android:layout_height="25dp"
-            android:text="收币"/>
+        android:layout_width="77dp"
+        android:layout_height="25dp"
+        android:background="@drawable/blue13000013_white_selector"
+        android:button="@null"
+        android:gravity="center"
+        android:textColor="@color/common_white"
+        android:checked="true"
+        android:text="收币"/>
         <RadioButton
             android:layout_width="77dp"
             android:layout_height="25dp"
+            android:background="@drawable/blue00131300_white_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/color_666666"
             android:text="转币"
             />
     </RadioGroup>

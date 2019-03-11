@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:background="@color/color_F5F5F5"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <RelativeLayout
@@ -48,6 +47,9 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:background="@color/common_white"
+        app:layout_constraintTop_toBottomOf="@+id/mTradeHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -80,10 +82,11 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mGlobalHeader"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/item_global"
         ></android.support.v7.widget.RecyclerView>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

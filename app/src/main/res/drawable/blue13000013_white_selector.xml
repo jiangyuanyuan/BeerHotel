@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/blue13000013_blue_shape" android:state_checked="true" />
+    <item android:drawable="@drawable/gray13000013_white_shape" android:state_checked="false" />
+</selector>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="76dp"
+android:paddingLeft="23dp"
+android:paddingRight="20dp"
+android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+android:layout_marginTop="1dp"
+android:background="@color/common_white"
+    >
+
+<TextView
+    android:id="@+id/mMoneyType"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="澳元AUD"
+    android:textColor="@color/color_4A4A4A"
+    android:textSize="15sp"
+    />
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="12,839.9382"
+    android:textColor="@color/color_4A4A4A"
+    android:textSize="15sp"
+   android:layout_alignParentBottom="true"
+    />
+
+<TextView
+    android:id="@+id/mPresentation"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="提现"
+    android:background="@drawable/blue4_white_shape"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:textColor="@color/color_3D8DDF"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    />
+<TextView
+    android:id="@+id/mRecharge"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="充值"
+    android:textColor="@color/color_3D8DDF"
+    android:layout_toLeftOf="@+id/mPresentation"
+    android:background="@drawable/blue4_white_shape"
+    android:layout_centerVertical="true"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:layout_marginRight="23dp"
+    />
+</RelativeLayout>

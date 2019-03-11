@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_F5F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="委托单详情"/>
+
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="365dp"
+    app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+    android:padding="16dp"
+    android:background="@color/common_white"
+    >
+    <TextView
+
+        android:id="@+id/mPurchaseName"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="买入"
+        android:padding="0dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_04C2AA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/mPurchaseTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="Chufa/AUD"
+        android:textColor="@color/color_4A4A4A"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toRightOf="@+id/mPurchaseName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:46 06/22"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/mPurchaseTypeName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已完成"
+        android:textColor="@color/color_3D8DDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="12dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="51dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/color_666666"
+        android:text="委托价(AUD)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/color_333333"
+        android:text="1.3908"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="109dp"
+        android:textColor="@color/color_666666"
+        android:text="委托量(Chufa)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="109dp"
+        android:textColor="@color/color_333333"
+        android:text="1000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="149dp"
+        android:textColor="@color/color_666666"
+        android:text="成交均价(AUD)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="149dp"
+        android:textColor="@color/color_333333"
+        android:text="1.3910"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="189dp"
+        android:textColor="@color/color_666666"
+        android:text="委托量(Chufa)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="189dp"
+        android:textColor="@color/color_333333"
+        android:text="1000"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="229dp"
+        android:textColor="@color/color_666666"
+        android:text="成交总量(AUD)"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="229dp"
+        android:textColor="@color/color_333333"
+        android:text="13910"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="269dp"
+        android:textColor="@color/color_666666"
+        android:text="手续费(AUD)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="309dp"
+        android:textColor="@color/color_666666"
+        android:text="实到账(AUD)"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="309dp"
+        android:textColor="@color/color_333333"
+        android:text="1000"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="269dp"
+        android:textColor="@color/color_333333"
+        android:text="34.775"
+        />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

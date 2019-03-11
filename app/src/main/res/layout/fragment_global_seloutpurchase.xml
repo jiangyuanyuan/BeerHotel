@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_F5F5F5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.ope.base.view.HeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleText="Chufa/AUD" />
+
+    <View
+        android:id="@+id/mView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/common_white"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RadioGroup
+        android:id="@+id/mSelloutPurRG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/mView"
+        app:layout_constraintStart_toStartOf="@+id/mView"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        >
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green3003_white_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:textColor="@color/common_white"
+            android:padding="5dp"
+            android:text="买入"/>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green0330_white_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/color_666666"
+            android:padding="5dp"
+            android:text="卖出"/>
+    </RadioGroup>
+
+<com.ope.base.view.IncDecView
+    android:id="@+id/mPriceDecIncRl"
+    android:layout_width="200dp"
+    android:layout_height="45dp"
+    app:layout_constraintTop_toBottomOf="@+id/mSelloutPurRG"
+    android:layout_marginTop="38dp"
+    android:layout_marginStart="16dp"
+    app:et_hint="数量"
+    app:et_text="0.00012358"
+    app:layout_constraintStart_toStartOf="parent"
+    >
+</com.ope.base.view.IncDecView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可用 74,123.0987 AUD"
+        app:layout_constraintTop_toBottomOf="@+id/mPriceDecIncRl"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/color_999999"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <com.ope.base.view.IncDecView
+        android:id="@+id/mSumDecInc"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPriceDecIncRl"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/gray6_transparent_shape"
+        android:layout_marginTop="44dp"
+        app:et_hint="数量"
+        >
+    </com.ope.base.view.IncDecView>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最大可买34.456 Chufa"
+        app:layout_constraintTop_toBottomOf="@+id/mSumDecInc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/color_999999"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        />
+
+    
+    <TextView
+        android:id="@+id/mATurnover"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/mSumDecInc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="54dp"
+        android:layout_marginStart="16dp"
+        android:text="交易额：- - AUD"
+        />
+    
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:text="买入"
+        android:textColor="@color/common_white"
+        app:layout_constraintTop_toBottomOf="@+id/mATurnover"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/green6_green_shape"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="3dp"
+        />
+
+
+
+<TextView
+    android:id="@+id/mSumTv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="0.00012382"
+    android:textColor="@color/color_333333"
+    app:layout_constraintStart_toEndOf="@+id/mSumDecInc"
+    app:layout_constraintTop_toTopOf="@+id/mView"
+    app:layout_constraintBottom_toBottomOf="@+id/mView"
+    android:layout_marginLeft="34dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价格"
+        app:layout_constraintStart_toStartOf="@+id/mSelloutRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        android:layout_marginTop="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数量"
+        app:layout_constraintEnd_toEndOf="@+id/mSelloutRecyclerView"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        android:layout_marginTop="19dp"
+        />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mSelloutRecyclerView"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
+        app:layout_constraintStart_toEndOf="@+id/mSelloutPurRG"
+        app:layout_constraintBottom_toTopOf="@+id/mSumTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_global_sellout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        ></android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mPurchaseRecyclerView"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        app:layout_constraintTop_toBottomOf="@+id/mSumTv"
+        app:layout_constraintStart_toEndOf="@+id/mSelloutPurRG"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_global_purchase"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        ></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/mDepth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="深度1"
+        android:drawableRight="@mipmap/add_pictures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseRecyclerView"
+        android:layout_marginEnd="24dp"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/mEntrustNowRl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/mView"
+        android:background="@color/common_white"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前委托"
+            android:textSize="18sp"
+            android:textColor="@color/color_4A4A4A"
+            android:layout_marginStart="19dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/mMoreIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/common_back_small"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="全部"
+            android:textColor="@color/color_4A4A4A"
+            android:layout_toLeftOf="@+id/mMoreIv"
+            />
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mEntrustRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/mEntrustNowRl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_global_entrust"
+        ></android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

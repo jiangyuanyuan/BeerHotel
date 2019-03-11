@@ -24,4 +24,11 @@
         <attr name="rightText" format="string"/>
     </declare-styleable>
 
+
+    <!--HeaderBar自定义属性-->
+    <declare-styleable name="IncDecView">
+        <attr name="et_text" format="string"/>
+        <attr name="et_hint" format="string"/>
+    </declare-styleable>
+
 </resources>

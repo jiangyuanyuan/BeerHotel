@@ -4,10 +4,12 @@ package com.ope.xchufa.injection.component
 import com.ope.xchufa.MainActivity
 import com.ope.xchufa.MainFragment
 import com.ope.xchufa.func.exchange.ExchangeFragment
+import com.ope.xchufa.func.global.GlobalEntrustDetailFragment
+import com.ope.xchufa.func.global.GlobalEntrustFragment
 import com.ope.xchufa.func.global.GlobalFragment
 import com.ope.xchufa.func.global.GlobalSelloutPurchaseFragment
 import com.ope.xchufa.func.my.MyFragment
-import com.ope.xchufa.func.my.digitalAssets.DigitalAssetsFragment
+import com.ope.xchufa.func.my.assets.*
 import com.ope.xchufa.func.my.kyc.*
 import com.ope.xchufa.func.my.login.LoginActivity
 import com.ope.xchufa.func.my.login.LoginFragment
@@ -39,7 +41,7 @@ interface AppComponent {
     fun inject(fragment: RetrievePwdFragment)
     fun inject(fragmentLogin: ResetLoginPwdFragment)
     fun inject(fragmentLogin: ResetAssetsPwdFragment)
-    fun inject(fragment: DigitalAssetsFragment)
+    fun inject(fragment: AssetsDigitalFragment)
     fun inject(fragment: SecurityFragment)
 
     fun inject(fragment: KycFragment)
@@ -63,6 +65,13 @@ interface AppComponent {
     //全球
     fun inject(fragment: GlobalFragment)
     fun inject(fragment: GlobalSelloutPurchaseFragment)
+    fun inject(fragment: GlobalEntrustFragment)
+    fun inject(fragment: GlobalEntrustDetailFragment)
+    fun inject(fragment: AssetsLegalFragment)
+    fun inject(fragment: AssetsRechargeFragment)
+    fun inject(fragment: AssetsExtractFragment)
+    fun inject(fragment: AssetsPresentationFragment)
+
 
 
     //消息

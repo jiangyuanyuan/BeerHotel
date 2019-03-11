@@ -51,20 +51,15 @@ object RouterPath {
     class Global{
         companion object {
             const val PATH_GLOBAL = "/Global/Global"
-            const val PATH_GLOBALSELLOUTPURCHASE = "/Global/GlobalSelloutPurchase"
+            const val PATH_GLOBAL_SELLOUTPURCHASE = "/Global/GlobalSelloutPurchase"
+            const val PATH_GLOBAL_ENTRUST = "/Global/GlobalEntrust"
+            const val PATH_GLOBAL_ENTRUST_DETAIL = "/Global/GlobalEntrustDetail"
+            const val PATH_GLOBAL_LEGALASSETS = "/Global/AssetsLegalFragment"
+            const val PATH_GLOBAL_RECHARGE = "/Global/AssetsRechargeFragment"
+            const val PATH_GLOBAL_EXTRACT = "/Global/AssetsExtractFragment"
+            const val PATH_GLOBAL_PRESENTATION = "/Global/AssetsPresentationFragment"
         }
     }
-
-//    //家庭成员管理模块
-//    class UserManageCenter{
-//        companion object {
-//            const val PATH_MANAGE = "/UserManageCenter/Manage"
-//            const val PATH_ADD = "/UserManageCenter/Add"
-//            const val PATH_DELETE = "/UserManageCenter/Delete"
-//        }
-//    }
-
-
 
     //我的
     class MyCenter{

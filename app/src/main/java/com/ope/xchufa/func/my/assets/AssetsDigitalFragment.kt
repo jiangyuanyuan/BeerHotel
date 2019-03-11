@@ -1,4 +1,4 @@
-package com.ope.xchufa.func.my.digitalAssets
+package com.ope.xchufa.func.my.assets
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_digtakassets.*
 
 
 @Route(path = RouterPath.MyCenter.PATH_DIGITALASSETS)
-class DigitalAssetsFragment : BaseFragment(){
+class AssetsDigitalFragment : BaseFragment(){
     override fun getLayoutId() = R.layout.fragment_digtakassets
     override fun injectComponent() {
         DaggerAppComponent.create().inject(this)

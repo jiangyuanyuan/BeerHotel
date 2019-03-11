@@ -24,10 +24,26 @@ val mMyFragment: SupportFragment by lazy {
             .navigation() as SupportFragment
 }
 
- val mDigitalAssetsFragment: SupportFragment by lazy {
+ val mAssetsDigitalFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.MyCenter.PATH_DIGITALASSETS)
             .navigation() as SupportFragment
 }
+
+val mAssetsLegalFragment: SupportFragment by lazy {
+    ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL_LEGALASSETS)
+            .navigation() as SupportFragment
+}
+
+val mAssetsRechargeFragment: SupportFragment by lazy {
+    ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL_RECHARGE)
+            .navigation() as SupportFragment
+}
+
+val mAssetsPresentationFragment: SupportFragment by lazy {
+    ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL_PRESENTATION)
+            .navigation() as SupportFragment
+}
+
 
 val mSecurityFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.MyCenter.PATH_SECURITY)
@@ -101,6 +117,16 @@ val mKycCertificatesAustraliaFragment: SupportFragment by lazy {
 
 val mPaymentFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.MyCenter.PATH_PAYMENT)
+            .navigation() as SupportFragment
+}
+
+val mGlobalSelloutPurchaseFragment: SupportFragment by lazy {
+    ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL_SELLOUTPURCHASE)
+            .navigation() as SupportFragment
+}
+
+val mGlobalFragment: SupportFragment by lazy {
+    ARouter.getInstance().build(RouterPath.Global.PATH_GLOBAL)
             .navigation() as SupportFragment
 }
 

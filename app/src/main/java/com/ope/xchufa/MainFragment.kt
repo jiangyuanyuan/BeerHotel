@@ -36,6 +36,7 @@ class MainFragment : BaseFragment() {
                 R.id.item_trade -> {
                     mMainViewPager.currentItem = 0
                 }
+
                 R.id.item_exchange -> {
                     mMainViewPager.currentItem = 1
                 }
@@ -44,6 +45,9 @@ class MainFragment : BaseFragment() {
                 }
                 R.id.item_my -> {
                     mMainViewPager.currentItem = 3
+                }
+                R.id.item_global -> {
+                    mMainViewPager.currentItem = 4
                 }
             }
             false
@@ -81,6 +85,7 @@ class MainFragment : BaseFragment() {
         mList.add(mExchangeFragment)
         mList.add(mNewsFragment)
         mList.add(mMyFragment)
+        mList.add(mGlobalFragment)
         viewPager.adapter = ViewPagerAdapter(childFragmentManager, mList)
     }
 

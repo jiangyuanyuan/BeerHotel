@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_white"
+    android:layout_marginTop="1dp"
+    android:padding="16dp">
+    <TextView
+
+        android:id="@+id/mPurchaseName"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="买入"
+        android:padding="0dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_04C2AA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/mPurchaseTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="Chufa/AUD"
+        android:textColor="@color/color_4A4A4A"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15sp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toRightOf="@+id/mPurchaseName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:46 06/22"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintLeft_toRightOf="@+id/mPurchaseTypeName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="撤销"
+        android:textColor="@color/color_3D8DDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="12dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价格(AUD)"
+        android:textSize="12sp"
+        android:textColor="@color/color_999999"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数量(Chufa)"
+        android:textSize="12sp"
+        android:textColor="@color/color_999999"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实际成交(Chufa)"
+        android:textSize="12sp"
+        android:textColor="@color/color_999999"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00386123"
+        android:textSize="15sp"
+        android:textColor="@color/color_4A4A4A"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="38dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.93"
+        android:textSize="15sp"
+        android:textColor="@color/color_4A4A4A"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="38dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="15sp"
+        android:textColor="@color/color_4A4A4A"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="38dp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
