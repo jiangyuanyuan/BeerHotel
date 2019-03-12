@@ -9,14 +9,14 @@ class ErrorNotice private constructor() {
         this.mErrorListener = listener
     }
 
-    fun notifyError(code: Int, msg: String) {
+    fun notifyError(code: String, msg: String) {
         if (null != mErrorListener) {
             mErrorListener!!.onNotify(code, msg)
         }
     }
 
     interface ErrorListener {
-        fun onNotify(code: Int, msg: String)
+        fun onNotify(code: String, msg: String)
     }
 
     companion object {

@@ -19,6 +19,7 @@
 
     <RelativeLayout
         android:id="@+id/mCountryRl"
+        android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@drawable/gray4_white_shape"
@@ -48,20 +49,55 @@
 
     </RelativeLayout>
 
-    <EditText
+    <LinearLayout
         android:id="@+id/mPhone"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="45dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mCountryRl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/gray4_white_shape"
-        android:hint="+86"
-        android:padding="12dp"
-        android:textSize="15sp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/mCountryRl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/mPhoneRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="+86"
+            />
+        <EditText
+            android:id="@+id/mPhoneEt"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textSize="15sp"
+            android:padding="12dp"
+
+            />
+
+    </LinearLayout>
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/mPhone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:background="@drawable/gray4_white_shape"-->
+        <!--android:hint="+86"-->
+        <!--android:padding="12dp"-->
+        <!--android:textSize="15sp"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginEnd="16dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/mCountryRl"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
 
     <EditText
         android:id="@+id/mVerificationCode"
@@ -80,6 +116,7 @@
         />
 
     <TextView
+        android:id="@+id/mGetVerificationCode"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"

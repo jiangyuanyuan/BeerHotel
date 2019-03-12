@@ -1,34 +1,67 @@
 package com.ope.xchufa.data.repository
 
 import com.ope.base.data.dto.Rep
+import com.ope.base.data.dto.Req
 import com.ope.base.helper.applySchedulersOnSingle
+import com.ope.base.helper.loge
 import com.ope.xchufa.data.api.UserService
+
+import com.ope.xchufa.data.dto.UserInfo
+import com.ope.xchufa.data.dto.VerificationCode
+import com.ope.xchufa.ext.getToken
 import io.reactivex.Single
 import javax.inject.Inject
 
 class UserRepository @Inject constructor(private val userService: UserService) {
 
-    fun getValidateCode(): Single<Rep<String>> {
-        return userService.getValidateCode()
+
+    fun getVerificationCode(mobile: String, shortPhone: String): Single<Rep<VerificationCode>> {
+        val req = HashMap<String,String>()
+        req.put("mobile",mobile)
+        req.put("shortPhone",shortPhone)
+        return userService.getVerificationCode(req)
                 .compose(applySchedulersOnSingle())
     }
 
-//    fun register(phone: String, password: String,captcha: String,sn: String): Single<Rep<RegisterFragment>> {
-//        return userService.register(RegisterReq(phone, password,captcha,sn))
-//                .compose(applySchedulersOnSingle())
-//    }
-//
-//    fun login(loginReq: LoginReq): Single<Rep<Tokens>> {
-//        return userService.login(loginReq)
-//                .map {
-//                    if (it.isSuccessful()){
-//                        Hawk.put(KEY_TOKEN, it.entry.login)
-//                        Hawk.put(KEY_TOKEN_IM, it.entry.message)
-//                    }
-//                    it
-//                }
-//                .compose(applySchedulersOnSingle())
-//    }
+    fun login(encryptAccount: String, encryptPwd: String,userName: String, userType: String, shortPhone: String): Single<Rep<UserInfo>> {
+        val req = Req()
+        req.putParams("encryptAccount",encryptAccount)
+        req.putParams("encryptPwd",encryptPwd)
+        req.putParams("userName",userName)
+        req.putParams("userType",userType)
+        req.putParams("shortPhone",shortPhone)
+        return userService.login(req)
+                .compose(applySchedulersOnSingle())
+    }
+
+    fun rigster(userName: String,encryptAccount: String, encryptPwd: String, userType: String, shortPhone: String): Single<Rep<UserInfo>> {
+        val req = Req()
+        req.putParams("encryptAccount",encryptAccount)
+        req.putParams("encryptPwd",encryptPwd)
+        req.putParams("userName",userName)
+        req.putParams("userType",userType)
+        req.putParams("shortPhone",shortPhone)
+        return userService.rigster(req)
+                .compose(applySchedulersOnSingle())
+    }
+
+    fun logout(): Single<Rep<Int>> {
+        val req = Req()
+        return userService.logout(req)
+                .compose(applySchedulersOnSingle())
+    }
+
+    fun resetPwd(encryptAccount: String, encryptPwd: String, userType: String, shortPhone: String): Single<Rep<Int>> {
+        val req = Req()
+        req.putParams("encryptAccount",encryptAccount)
+        req.putParams("encryptPwd",encryptPwd)
+        req.putParams("userType",userType)
+        req.putParams("shortPhone",shortPhone)
+        return userService.resetPwd(req)
+                .compose(applySchedulersOnSingle())
+    }
+
+
 //
 //    fun getLoginUser(): Single<Rep<UserInfo>> {
 //        return userService.getLoginUser()
@@ -58,18 +91,6 @@ class UserRepository @Inject constructor(private val userService: UserService) {
 //                .compose(applySchedulersOnSingle())
 //    }
 //
-//    fun logout(): Single<Rep<Any>> {
-//        return userService.logout()
-//                .map {
-//                    // 退出登录时,需清除的本地数据
-//                    Hawk.delete(KEY_TOKEN)
-//                    Hawk.delete(KEY_TOKEN_IM)
-//                    Im.INSTANCE.disconnect()
-//                    HealthHelper.clear()
-//                    it
-//                }
-//                .compose(applySchedulersOnSingle())
-//    }
 //
 //    fun updateUserInfo(userInfo: UserInfo): Single<Rep<UserInfo>> {
 //        return userService.updateUserInfo(userInfo)
@@ -117,9 +138,5 @@ class UserRepository @Inject constructor(private val userService: UserService) {
 //                .compose(applySchedulersOnSingle())
 //    }
 //
-//    fun resetPwd(phone: String, password: String,captcha: String): Single<Rep<String>> {
-//        return userService.resetPwd(ResetPwdReq(phone, captcha, password))
-//                .compose(applySchedulersOnSingle())
-//    }applySchedulersOnSingle
 
 }

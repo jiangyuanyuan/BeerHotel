@@ -10,9 +10,17 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+
+
+
+
+    <!--权限-->
+    <string name="permission_opened">权限已打开</string>
+    <string name="permission_rationale">请点击允许,申请必要的权限</string>
+    <string name="permission_denied">已拒绝权限申请</string>
+    <string name="permission_again">请在手机设置中打开所有权限</string>
+    <string name="permission_dialog_allow">允许</string>
+    <string name="permission_dialog_deny">拒绝</string>
 
 
 

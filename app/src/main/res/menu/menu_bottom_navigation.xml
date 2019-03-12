@@ -2,23 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/item_trade"
-        android:icon="@mipmap/tab_icon_1"
+        android:icon="@drawable/nav_tab_icon_1_selector"
         android:title="交易" />
     <item
         android:id="@+id/item_exchange"
-        android:icon="@mipmap/tab_icon_2"
+        android:icon="@drawable/nav_tab_icon_2_selector"
         android:title="收转币" />
     <item
         android:id="@+id/item_news"
-        android:icon="@mipmap/tab_icon_3"
+        android:icon="@drawable/nav_tab_icon_3_selector"
         android:title="消息" />
     <item
         android:id="@+id/item_my"
-        android:icon="@mipmap/tab_icon_4"
+        android:icon="@drawable/nav_tab_icon_4_selector"
         android:title="我的" />
 
-    <item
-        android:id="@+id/item_global"
-        android:icon="@mipmap/tab_icon_1"
-        android:title="交易" />
 </menu>

@@ -17,16 +17,16 @@
         app:titleText="重设登录密码" />
 
     <TextView
-        android:id="@+id/mOldPassword"
+        android:id="@+id/mUsername"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:textSize="15sp"
         android:padding="12dp"
-        android:textColor="@color/color_333333"
+        android:textColor="@color/color_666666"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="33dp"
-        android:hint="账号：football0101"
+        android:text="账号："
         app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="10dp"
         android:hint="新登录密码"
-        app:layout_constraintTop_toBottomOf="@+id/mOldPassword"
+        app:layout_constraintTop_toBottomOf="@+id/mUsername"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />

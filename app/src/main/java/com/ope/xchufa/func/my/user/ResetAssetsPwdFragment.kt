@@ -35,6 +35,7 @@ class ResetAssetsPwdFragment : BaseFragment(){
         RxView.clicks(mSubmit)
                 .compose(applyWidgetSchedulers())
                 .subscribe {
+
                     (activity as SupportActivity).startWithPop(mLoginFragment)
                 }
 

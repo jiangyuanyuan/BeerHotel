@@ -1,35 +1,51 @@
 package com.ope.xchufa.data.api
 
 import com.ope.base.data.dto.Rep
+import com.ope.base.data.dto.Req
 import com.ope.xchufa.data.dto.UserInfo
+import com.ope.xchufa.data.dto.VerificationCode
 import io.reactivex.Single
 import retrofit2.http.*
 
 interface UserService {
 
+
     /**
      * 获取验证码
      */
-    @POST("kinship-api/getValidateCode")
-    fun getValidateCode(): Single<Rep<String>>
 
-//    /**
-//     * 注册
-//     */
-//    @POST("kinship-api/register")
-//    fun register(@Body registerReq: RegisterReq): Single<Rep<RegisterFragment>>
-
-//    /**
-//     * 登录
-//     */
-//    @POST("kinship-api/login")
-//    fun login(@Body loginReq: LoginReq): Single<Rep<Tokens>>
+    @POST("/v1/sms/verifycode")
+    fun getVerificationCode(@Body req: HashMap<String,String>): Single<Rep<VerificationCode>>
 
     /**
-     * 获取用户信息
+     * 登录
      */
-    @GET("kinship-api/getLoginUser")
-    fun getLoginUser(): Single<Rep<UserInfo>>
+    @POST("/v1/account/login")
+    fun login(@Body req: Req): Single<Rep<UserInfo>>
+
+    /**
+     * 注册
+     */
+    @POST("/v1/account/register")
+    fun rigster(@Body req: Req): Single<Rep<UserInfo>>
+
+
+    /**
+     * 登出
+     */
+    @POST("/v1/account/logout")
+    fun logout(@Body req: Req): Single<Rep<Int>>
+
+
+
+    /**
+     * 修改密码
+     */
+    @POST("/v1/account/resetPassword")
+    fun resetPwd(@Body req: Req): Single<Rep<Int>>
+
+
+
 
 //    /**
 //     * 验证token是否有效

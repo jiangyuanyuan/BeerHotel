@@ -3,11 +3,10 @@
 package com.ope.base
 
 
-//const val DEBUG_API_BASE_URL = "http://192.168.8.106:8888/"
-const val DEBUG_API_BASE_URL = "http://120.78.174.86:8888/"
-//var DEBUG_PRINTER_IP = Hawk.get<String>(PRINTER_IP, "192.168.1.100")  // 打印机ip
-//var DEBUG_API_BASE_URL = Hawk.get<String>(CUSTOM_API_URL_KEY, "http://121.196.210.198/")  // 二代测试
-//var DEBUG_API_BASE_URL_FOR_NLU = Hawk.get<String>(CUSTOM_API_NLU_URL_KEY, "http://118.31.54.89:8080/")// nlu 二代测试
+
+//const val DEBUG_API_BASE_URL = "http://192.168.1.197:8099"
+const val DEBUG_API_BASE_URL = "http://192.168.0.121:8090"
+
 
 
 const val KEY_TOKEN = "KEY_TOKEN"
@@ -23,3 +22,5 @@ const val KEY_TONE_PHOTO = "KEY_TONE_PHOTO"
 
 // TOKEN有效时间7天，安全着想减去5分钟
 const val KEY_TOKEN_VALID_TIME : Long = 7 * 24 * 60 * 60 * 1000 - 5 * 60 * 1000
+
+

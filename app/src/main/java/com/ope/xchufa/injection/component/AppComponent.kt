@@ -11,8 +11,7 @@ import com.ope.xchufa.func.global.GlobalSelloutPurchaseFragment
 import com.ope.xchufa.func.my.MyFragment
 import com.ope.xchufa.func.my.assets.*
 import com.ope.xchufa.func.my.kyc.*
-import com.ope.xchufa.func.my.login.LoginActivity
-import com.ope.xchufa.func.my.login.LoginFragment
+import com.ope.xchufa.func.my.user.LoginFragment
 import com.ope.xchufa.func.my.payment.PaymentAddAliWechatFragment
 import com.ope.xchufa.func.my.payment.PaymentAddBank
 import com.ope.xchufa.func.my.payment.PaymentFragment
@@ -32,7 +31,6 @@ interface AppComponent {
     fun inject(fragment: MainFragment)
 
     //我的
-    fun inject(activity: LoginActivity)
     fun inject(fragment: LoginFragment)
     fun inject(fragment: MyFragment)
     fun inject(fragment: AgreementFragment)

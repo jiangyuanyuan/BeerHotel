@@ -3,9 +3,9 @@ package com.ope.base.data.net
 import com.ope.base.DEBUG_API_BASE_URL
 import com.ope.base.KEY_TOKEN
 import com.google.gson.JsonParser
+import com.ope.base.data.dto.RepCode
 
 import com.ope.base.data.notice.ErrorNotice
-import com.orhanobut.hawk.Hawk
 import okhttp3.Interceptor
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
@@ -37,19 +37,20 @@ class RetrofitFactory private constructor(){
             val builder = request.newBuilder()
                     .addHeader("Content_Type", "application/json")
                     .addHeader("charset","UTF-8")
-            if (Hawk.get<String>(KEY_TOKEN) != null){
-                builder.addHeader("Authorization", Hawk.get<String>(KEY_TOKEN))
-            }
+//            if (Hawk.get<String>(KEY_TOKEN) != null){
+//                builder.addHeader("Authorization", Hawk.get<String>(KEY_TOKEN))
+//            }
+
             val response = chain.proceed(builder.build())
             val bytes = response.body()!!.bytes() ?: "".toByteArray()
             val build = response.newBuilder()
                     .body(ResponseBody.create(MediaType.parse("UTF-8"), bytes)).build()
             try {
                 val returnData = JsonParser().parse(String(bytes)).asJsonObject
-                val responseCode = returnData.get("responseCode").asString.toInt()
+                val responseCode = returnData.get("code").asString
                 when(responseCode){
-                    112 -> { // 另一处登录
-                        ErrorNotice.INSTANCE.notifyError(112,"另一端登录")
+                    RepCode.TOKEN_EXPIRED.code -> { // token过期
+                        ErrorNotice.INSTANCE.notifyError(RepCode.TOKEN_EXPIRED.code,RepCode.TOKEN_EXPIRED.message)
                     }
                 }
             } catch (e: Exception) {

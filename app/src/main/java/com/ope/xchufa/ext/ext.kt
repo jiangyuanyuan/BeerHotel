@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.media.RingtoneManager
+import com.ope.base.KEY_TOKEN
 import com.ope.base.KEY_TONE_PHOTO
 
 import com.orhanobut.hawk.Hawk
@@ -56,4 +57,13 @@ fun monthAddPrefix0(month: Int): String {
         return "0$month"
     }
     return "$month"
+}
+
+
+fun isLogin():Boolean{
+    return Hawk.get<String>(KEY_TOKEN) !=null
+}
+
+fun getToken():String{
+    return Hawk.get<String>(KEY_TOKEN)?:""
 }

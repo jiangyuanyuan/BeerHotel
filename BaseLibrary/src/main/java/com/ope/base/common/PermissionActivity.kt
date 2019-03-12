@@ -23,7 +23,7 @@ open class PermissionActivity : BaseActivity() {
             Manifest.permission.READ_CONTACTS,
             Manifest.permission.CAMERA)
     fun showStorage() {
-//        Toast.makeText(this, getString(R.string.permission_opened), Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.permission_opened), Toast.LENGTH_SHORT).show()
     }
 
     @OnShowRationale(

@@ -6,12 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.alibaba.android.arouter.launcher.ARouter
+import com.ope.base.data.ViewModelFactory
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 import me.yokeyword.fragmentation.SupportFragment
+import javax.inject.Inject
 
 abstract class BaseFragment : SupportFragment() {
 
     protected val scopeProvider by lazy { AndroidLifecycleScopeProvider.from(this) }
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

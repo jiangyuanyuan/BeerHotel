@@ -1,6 +1,8 @@
 package com.ope.base.security;
 
 
+import com.ope.base.helper.DateUtils;
+
 import org.json.JSONObject;
 
 import java.net.URLDecoder;
@@ -187,11 +189,11 @@ public class AESUtils {
 //		System.out.println(resultString);
 //		String userType = "USER_TYPE_MOBILE";
 //		String account = "18576640992";
-////		String password = MD5Utils.md5("123456asdfg");
+//		String password = MD5Utils.md5("123456asdfg");
 //		String password = "123456asdfg";
 //		System.out.println("password:"+password);
 //
-////		String time = String.valueOf(DateUtils.getUTCTime().getTime());
+//		String time = String.valueOf(DateUtils.getUTCTime().getTime());
 //		String time = "1499862940037";
 //		System.out.println("time:"+time);
 //		System.out.println("type:" + Base64.encode(userType));

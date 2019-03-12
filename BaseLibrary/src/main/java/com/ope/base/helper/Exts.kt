@@ -2,6 +2,7 @@ package com.ope.base.helper
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.ActivityManager
 import android.app.Dialog
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
@@ -16,6 +17,7 @@ import android.provider.Settings
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
+import android.telephony.TelephonyManager
 import android.util.DisplayMetrics
 import android.view.*
 import android.view.inputmethod.InputMethodManager
@@ -196,6 +198,31 @@ fun Context.startWebApp(url: String) {
         startActivity(intent)
     } catch (e: Exception) {
     }
+}
+
+
+fun Context.getPhoneNumber():String{
+    val tm = this.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+    return tm.line1Number//获取本机号码
+
+}
+
+fun Activity.getDeviceID():String{
+    val tm = this.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+    return tm.getDeviceId()
+}
+
+fun  Activity.getAppProcessName():String {
+    //当前应用pid
+    val pid = android.os.Process.myPid()
+    //任务管理类
+    val manager = this.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+    //遍历所有应用
+    manager.runningAppProcesses?.forEach {
+        if (it.pid == pid)//得到当前应用
+            return it.processName//返回包名
+    }
+    return ""
 }
 
 /**

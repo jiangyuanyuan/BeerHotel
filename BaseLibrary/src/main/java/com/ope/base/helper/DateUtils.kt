@@ -263,4 +263,14 @@ object DateUtils {
             val c = Calendar.getInstance(defTimeZone)
             return c.timeInMillis
         }
+
+    fun getUTCTime(): Date {
+        val cal = Calendar.getInstance()
+        //获得时区和 GMT-0 的时间差,偏移量
+        val offset = cal.get(Calendar.ZONE_OFFSET)
+        //获得夏令时  时差
+        val dstoff = cal.get(Calendar.DST_OFFSET)
+        cal.add(Calendar.MILLISECOND, -(offset + dstoff))
+        return cal.time
+    }
 }

@@ -10,13 +10,15 @@
     android:background="@drawable/blue6_blue_shape">
 
 
-    <ImageView
+    <CheckBox
         android:id="@+id/mSelectIcon"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="6dp"
-        android:src="@mipmap/icon_selected_default"
+        android:button="@null"
+        android:background="@drawable/hook_blue_white_selector"
+        android:checked="false"
         />
 
     <TextView

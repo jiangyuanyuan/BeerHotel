@@ -72,6 +72,8 @@ project(':BaseLibrary') {
         implementation Deps.arouter
         kapt Deps.arouterCompiler
 
+        implementation project(':Provider')
+
         //6.0权限处理
         implementation(Deps.permissionsDispatcher) {
             exclude module: "support-v13"

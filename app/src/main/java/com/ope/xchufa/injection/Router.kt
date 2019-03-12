@@ -4,6 +4,8 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.ope.provider.router.RouterPath
 import me.yokeyword.fragmentation.SupportFragment
 
+
+
 val mTradeFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.Trade.PATH_TRADE)
             .navigation() as SupportFragment
@@ -81,20 +83,14 @@ val mTradeDetailFragment: SupportFragment by lazy {
             .navigation() as SupportFragment
 }
 
-val mRegisterFragment: SupportFragment by lazy {
-    ARouter.getInstance().build(RouterPath.MyCenter.PATH_REGISTER)
-            .navigation() as SupportFragment
-}
+
 
 val mRetrievePwdFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.MyCenter.PATH_RETRIEVEPWD)
             .navigation() as SupportFragment
 }
 
-val mAgreementFragment: SupportFragment by lazy {
-    ARouter.getInstance().build(RouterPath.MyCenter.PATH_RETRIEVEPWD)
-            .navigation() as SupportFragment
-}
+
 val mKycFragment: SupportFragment by lazy {
     ARouter.getInstance().build(RouterPath.MyCenter.PATH_KYC)
             .navigation() as SupportFragment
