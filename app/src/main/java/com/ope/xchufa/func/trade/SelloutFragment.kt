@@ -12,10 +12,11 @@ import kotlinx.android.synthetic.main.fragment_sellout.*
 import android.view.LayoutInflater
 
 import android.app.AlertDialog
+import android.arch.lifecycle.ViewModelProviders
 import com.jakewharton.rxbinding2.view.RxView
 import com.ope.base.helper.applyWidgetSchedulers
 import com.ope.base.helper.bottomShow
-
+import com.ope.xchufa.data.vm.TradeViewModel
 
 
 @Route(path = RouterPath.Trade.PATH_SELLOUT)
@@ -25,9 +26,11 @@ class SelloutFragment : BaseFragment(){
     override fun injectComponent() {
         DaggerAppComponent.create().inject(this)
     }
+    private lateinit var mTradeViewModel: TradeViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mTradeViewModel = ViewModelProviders.of(_mActivity, viewModelFactory).get(TradeViewModel::class.java)
 
 
         mHeaderBar.onBackClick(View.OnClickListener {

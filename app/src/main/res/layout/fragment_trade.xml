@@ -23,12 +23,14 @@
             />
         
         <RadioGroup
+            android:id="@+id/mSelloutPurRG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:orientation="horizontal"
             >
             <RadioButton
+                android:id="@+id/mPurchaseRB"
                 android:layout_width="77dp"
                 android:layout_height="25dp"
                 android:background="@drawable/blue13000013_white_selector"
@@ -37,15 +39,16 @@
                 android:textColor="@color/common_white"
                 android:checked="true"
                 android:text="买入"/>
+
             <RadioButton
+                android:id="@+id/mSelloutRB"
                 android:layout_width="77dp"
                 android:layout_height="25dp"
                 android:background="@drawable/blue00131300_white_selector"
                 android:button="@null"
                 android:gravity="center"
-                android:textColor="@color/color_666666"
                 android:text="卖出"
-                />
+                android:textColor="@color/color_666666" />
         </RadioGroup>
 
         <ImageView
@@ -73,6 +76,9 @@
         android:id="@+id/mTabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:tabIndicatorColor="@color/color_3D8DDF"
+        app:tabSelectedTextColor="@color/color_3D8DDF"
         app:tabMode="fixed"/>
 
     <android.support.v4.view.ViewPager

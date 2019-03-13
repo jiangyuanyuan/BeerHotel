@@ -18,6 +18,8 @@ android:background="@color/common_white"
     android:text="澳元AUD"
     android:textColor="@color/color_4A4A4A"
     android:textSize="15sp"
+    android:singleLine="true"
+    android:ellipsize="end"
     />
 
 
@@ -28,6 +30,8 @@ android:background="@color/common_white"
     android:textColor="@color/color_4A4A4A"
     android:textSize="15sp"
    android:layout_alignParentBottom="true"
+    android:singleLine="true"
+    android:ellipsize="end"
     />
 
 <TextView

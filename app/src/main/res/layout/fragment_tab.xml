@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mRecyclerView"
+    android:background="@color/color_F5F5F5"
     tools:layoutManager="LinearLayoutManager"
     tools:listitem="@layout/item_trade_tab">
 

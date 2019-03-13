@@ -39,7 +39,8 @@
         android:layout_marginLeft="17dp"
         android:layout_toRightOf="@+id/mCurrencyIcon"
         android:layout_below="@+id/mCurrencyName"
-
+        android:singleLine="true"
+        android:ellipsize="end"
         />
 
 

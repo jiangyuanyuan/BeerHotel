@@ -24,7 +24,7 @@
         android:layout_height="105dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintTop_toBottomOf="@+id/mHeaderBar"
-        android:background="@android:color/white">
+        android:background="@color/color_F5F5F5">
 
         <ImageView
             android:id="@+id/mTabItemIcon"
@@ -37,6 +37,7 @@
             android:src="@mipmap/common_img_contacts"
             />
         <TextView
+            android:id="@+id/mUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
@@ -135,22 +136,41 @@
     </android.support.constraint.ConstraintLayout>
 
 
-    <RelativeLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="手续费：0.5%"
+        android:textColor="@color/color_999999"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:drawableRight="@mipmap/common_icon_icon"
+        android:layout_marginEnd="26dp"
+        />
+
+    <LinearLayout
         android:id="@+id/mPurchaseExchangeRl"
         android:layout_width="129dp"
         android:layout_height="36dp"
         app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/color_F5F5F5"
+        android:background="@drawable/gray5_gray_shape"
         android:layout_marginStart="22dp"
         android:layout_marginTop="37dp"
+        android:orientation="horizontal"
+        android:gravity="center"
         >
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/mCNY"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="0.00"
             android:layout_centerVertical="true"
             android:background="@null"
+            android:inputType="number"
             android:layout_marginLeft="11dp"
             />
 
@@ -161,26 +181,31 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="11dp"
             android:text="CNY"/>
-    </RelativeLayout>
+    </LinearLayout>
 
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="129dp"
         android:layout_height="36dp"
         app:layout_constraintTop_toBottomOf="@+id/mPurchaseInfoCl"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/color_F5F5F5"
+        android:background="@drawable/gray5_gray_shape"
         android:layout_marginEnd="22dp"
         android:layout_marginTop="37dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         >
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/mChufa"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:hint="0.00"
             android:layout_centerVertical="true"
             android:background="@null"
             android:layout_marginLeft="11dp"
+            android:inputType="number"
             />
 
         <TextView
@@ -189,8 +214,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="11dp"
-            android:text="CNY"/>
-    </RelativeLayout>
+            android:text="Chufa"/>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -252,7 +277,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/color_3D8DDF"
+        android:background="@drawable/blue4_blue_shape"
         android:textSize="15sp"
         />
 

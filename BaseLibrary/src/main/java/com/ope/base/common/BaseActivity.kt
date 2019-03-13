@@ -3,6 +3,7 @@ package com.ope.base.common
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import com.alibaba.android.arouter.launcher.ARouter
@@ -20,6 +21,7 @@ import javax.inject.Inject
 
 open class BaseActivity : SupportActivity() , ErrorNotice.ErrorListener {
     override fun onNotify(code: String, msg: String) {
+        Log.e("BaseActivity:  code  ",code)
         when(code){
             RepCode.TOKEN_EXPIRED.code -> start(ARouter.getInstance().build(RouterPath.MyCenter.PATH_LOGINFRAGMENT).navigation() as SupportFragment)
         }

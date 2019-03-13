@@ -33,6 +33,12 @@
             android:text="转币"
             />
     </RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_F5F5F5"
+        android:layout_marginTop="8dp"
+        ></View>
 
     <RelativeLayout
         android:visibility="gone"

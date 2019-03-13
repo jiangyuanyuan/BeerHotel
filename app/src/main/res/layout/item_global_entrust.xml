@@ -95,11 +95,15 @@
         app:layout_constraintTop_toBottomOf="@+id/mPurchaseName"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="38dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constraintRight_toLeftOf="@+id/mSum"
         />
 
 
 
     <TextView
+        android:id="@+id/mSum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2.93"

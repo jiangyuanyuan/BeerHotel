@@ -38,7 +38,8 @@
         android:layout_marginLeft="13dp"
         android:layout_toRightOf="@+id/mIcon"
         android:layout_below="@+id/mTransactionType"
-
+        android:singleLine="true"
+        android:ellipsize="end"
         />
 
 
@@ -52,6 +53,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="13dp"
         android:layout_marginRight="24dp"
+        android:singleLine="true"
+        android:ellipsize="end"
         />
 
     <TextView

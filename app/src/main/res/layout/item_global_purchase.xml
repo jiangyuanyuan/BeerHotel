@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:text="8.3738"
         android:textColor="@color/color_04C2AA"
+        android:singleLine="true"
+        android:ellipsize="end"
         />
     <TextView
         android:layout_width="wrap_content"

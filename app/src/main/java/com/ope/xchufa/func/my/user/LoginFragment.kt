@@ -105,7 +105,6 @@ class LoginFragment : BaseFragment() {
                     Country.mCountryList[0]->Hawk.put(Country.COUNTRYTYPE,Country.AUSTRALIA_PHONETYPE)
                     Country.mCountryList[1]->Hawk.put(Country.COUNTRYTYPE,Country.CHINA_PHONETYPE)
                 }
-                hideSoftInput()
                 (activity as SupportActivity).startWithPop(mMainFragment)
 
             }

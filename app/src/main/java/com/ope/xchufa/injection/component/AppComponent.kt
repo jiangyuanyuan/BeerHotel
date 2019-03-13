@@ -59,6 +59,7 @@ interface AppComponent {
     fun inject(fragment: PurchaseDetailFragment)
     fun inject(fragment: SelloutDetailFragment)
     fun inject(fragment: TradeHistoryFragment)
+    fun inject(fragment: TabFragment)
 
     //全球
     fun inject(fragment: GlobalFragment)

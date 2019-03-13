@@ -45,16 +45,18 @@ class RetrofitFactory private constructor(){
             val bytes = response.body()!!.bytes() ?: "".toByteArray()
             val build = response.newBuilder()
                     .body(ResponseBody.create(MediaType.parse("UTF-8"), bytes)).build()
+            var responseCode = ""
             try {
                 val returnData = JsonParser().parse(String(bytes)).asJsonObject
-                val responseCode = returnData.get("code").asString
+                 responseCode = returnData.get("code").asString
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }finally {
                 when(responseCode){
                     RepCode.TOKEN_EXPIRED.code -> { // token过期
                         ErrorNotice.INSTANCE.notifyError(RepCode.TOKEN_EXPIRED.code,RepCode.TOKEN_EXPIRED.message)
                     }
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
             }
             build
         }

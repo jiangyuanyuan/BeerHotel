@@ -40,6 +40,8 @@
         android:textColor="@color/common_white"
         android:layout_marginRight="17dp"
         android:layout_below="@+id/mName"
+        android:singleLine="true"
+        android:ellipsize="end"
         android:layout_alignParentRight="true"/>
 
 

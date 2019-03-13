@@ -2,6 +2,7 @@ package com.ope.xchufa.injection.module
 
 
 import com.ope.base.data.net.RetrofitFactory
+import com.ope.xchufa.data.api.TradeService
 import com.ope.xchufa.data.api.UserService
 import dagger.Module
 import dagger.Provides
@@ -14,6 +15,12 @@ class AppModule {
     @Provides
     fun provideUserService(): UserService {
         return RetrofitFactory.instance.create(UserService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideTradeService(): TradeService {
+        return RetrofitFactory.instance.create(TradeService::class.java)
     }
 
 
