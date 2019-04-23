@@ -19,7 +19,7 @@ Kotlin AAC架构MVVM实现区块链交易所包括撮合、场外交易，UI架�
 
 + 整个项目采用kotlin语言编写
 + 使用AAC架构模式开发，面向数据编程，数据UI双向绑定，数据改变UI随着改变
-+ Fragmentation实现"单Activity＋多Fragment"架构
++ 使用Fragmentation实现"单Activity＋多Fragment"架构
 + 使用ARouter框架进行模块间通信(页面的跳转以及服务管理)
 + 使用kotlin框架Kotlin-Android-Extensions、Anko
 + 使用注解神器Dagger2
@@ -32,4 +32,4 @@ Kotlin AAC架构MVVM实现区块链交易所包括撮合、场外交易，UI架�
 
 ##### V1.0.0
 
-初步实现第一版
+初步实现第一版  如有问题联系微信15622501009  281421465@qq.com
