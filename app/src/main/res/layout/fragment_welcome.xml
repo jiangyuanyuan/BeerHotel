@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="版权所有© 深圳讴谱科技有限公司 2018"
+        android:text="版权所有© Freedom 2018"
         android:textColor="@android:color/white"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
