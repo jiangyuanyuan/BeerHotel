@@ -29,7 +29,7 @@
         tools:replace="android:label,android:allowBackup">
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".web.WebActivity">
+        <activity android:name=".func.web.WebActivity">
 
         </activity>
         <activity android:name=".WelcomePermissionActivity"
